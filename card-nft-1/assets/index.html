@@ -6,24 +6,42 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Outfit:wght@300;400;600&family=Quicksand:wght@300;400;700&family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="scss/style.css">
   
   <title>Frontend Mentor | NFT preview card component</title>
 </head>
-<body>
+<body class="body">
+  <main>
+    <article class="card">
+      <img class="card__img" src="images/image-equilibrium.jpg" alt="image-equilibrium">
+      <h1 class="card__title">Equilibrium #3429</h1>
+      <p class="card__content">Our Equilibrium collection promotes balance and calm.</p>
+      
+      <div class="card__infos">        
+        <div class="card__infos-numbers">
+          <img class="card__icon-ether" src="images/icon-ethereum.svg" alt="Ethereum Icon">
+          <p class="card__content-left">0.041 ETH</p>
+        </div>
 
-  Equilibrium #3429
+        <div class="card__infos-numbers">
+          <img class="card__icon-clock" src="images/icon-clock.svg" alt="Clock Icon">
+          <p class="card__content-right">3 days left</p>
+        </div>
+      </div>
 
-  Our Equilibrium collection promotes balance and calm.
+      <hr>
 
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <div class="card__infos-person">
+        <img class="card__infos___img" src="images/image-avatar.png" alt="">
+        <p  class="card__infos___content">Creation of</p>
+        <p  class="card__infos___content">Jules Wyvern</p>
+      </div>
+    </article>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </main>
 </body>
 </html>

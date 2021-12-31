@@ -1,4 +1,93 @@
+
+$soft-blue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+$dark-blue-card: hsl(216, 50%, 16%);
+$dark-blue-body: hsl(217, 54%, 11%);
+$dark-blue-line: hsl(215, 32%, 27%);
+$white: hsl(0, 0%, 100%);
+
+%margin-left {margin-left: 2rem;}
+
 .body{
-    background-color: aquamarine;
-    color: blue;
+    align-items: center;
+    background-color: $dark-blue-body;
+    display: flex;
+    font-family: 'Outfit', 'Helvetica', sans-serif;
+    font-size: 18px;
+    justify-content: center;
 }
+
+.main {
+    background-color: $dark-blue-body;
+}
+
+.card {
+    background: $dark-blue-card;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-top: 20%;
+    margin-left: 2rem;
+    width: 350px;
+
+    &__img {
+        box-sizing: border-box;
+        border-radius: 20px;
+        margin: 2rem;
+        width: 90%;
+    }
+
+    &__title {
+        color: $white;
+        font-weight: 600;
+        margin-left: 2rem;
+    }
+
+    &__content {
+        color: $soft-blue;
+        margin-left: 2rem;
+    }
+
+    &__content-right {
+        text-align: right;
+    }
+
+    &__infos {
+        display: flex;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    &__infos-numbers {
+        width: 35%;
+        display: flex;
+    }
+
+    &__infos-person {
+        display: flex;
+        margin-left: 2rem;
+        align-items: center;
+    }
+
+    &__infos___img {
+        display: flex;
+        flex-direction: row;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 1px solid $white;
+    }
+
+    &__infos___content {
+        display: flex;
+        width: 20%;
+        color: $soft-blue;
+    }
+
+}
+

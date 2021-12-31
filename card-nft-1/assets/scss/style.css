@@ -1,0 +1,74 @@
+.body {
+  align-items: center;
+  background-color: #0d192b;
+  display: flex;
+  font-family: "Outfit", "Helvetica", sans-serif;
+  font-size: 18px;
+  justify-content: center;
+}
+
+.main {
+  background-color: #0d192b;
+}
+
+.card {
+  background: #14253d;
+  box-sizing: border-box;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-top: 20%;
+  margin-left: 2rem;
+  width: 350px;
+}
+.card__img {
+  box-sizing: border-box;
+  border-radius: 20px;
+  margin: 2rem;
+  width: 90%;
+}
+.card__title {
+  color: white;
+  font-weight: 600;
+  margin-left: 2rem;
+}
+.card__content {
+  color: #8bacda;
+  margin-left: 2rem;
+}
+.card__content-right {
+  text-align: right;
+}
+.card__infos {
+  display: flex;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.card__infos-numbers {
+  width: 35%;
+  display: flex;
+}
+.card__infos-person {
+  display: flex;
+  margin-left: 2rem;
+  align-items: center;
+}
+.card__infos___img {
+  display: flex;
+  flex-direction: row;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.card__infos___content {
+  display: flex;
+  width: 20%;
+  color: #8bacda;
+}
+
+/*# sourceMappingURL=style.css.map */
