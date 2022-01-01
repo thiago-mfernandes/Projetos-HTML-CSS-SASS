@@ -1,19 +1,33 @@
+//variables
 
-$soft-blue: hsl(215, 51%, 70%);
 $cyan: hsl(178, 100%, 50%);
 $dark-blue-card: hsl(216, 50%, 16%);
 $dark-blue-body: hsl(217, 54%, 11%);
 $dark-blue-line: hsl(215, 32%, 27%);
+$soft-blue: hsl(215, 51%, 70%);
 $white: hsl(0, 0%, 100%);
 
-%margin-left {margin-left: 2rem;}
+//placeholders
+%margin-left-bottom {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+//function calculate Rem;
+@function calculateRem ($size) {
+    @return $size / 16px * 1rem;
+}
+
+//mixin function with font-size for best responsive layout:last-child
+@mixin fontSize($size) {
+    font-size: calculateRem($size);
+}
+
 
 .body{
     align-items: center;
     background-color: $dark-blue-body;
     display: flex;
-    font-family: 'Outfit', 'Helvetica', sans-serif;
-    font-size: 18px;
     justify-content: center;
 }
 
@@ -27,28 +41,32 @@ $white: hsl(0, 0%, 100%);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    font-family: 'Outfit', 'Montserrat', sans-serif;
     flex-wrap: nowrap;
     justify-content: center;
-    margin-top: 20%;
-    margin-left: 2rem;
-    width: 350px;
+    margin: 60px 20px 60px 20px;
+    width: 375px;
+    @include fontSize(18px);
 
     &__img {
         box-sizing: border-box;
-        border-radius: 20px;
-        margin: 2rem;
+        border-radius: 10px;
+        margin: 20px;
         width: 90%;
     }
 
     &__title {
         color: $white;
         font-weight: 600;
-        margin-left: 2rem;
+        @extend %margin-left-bottom;
+        @include fontSize(24px);
     }
 
     &__content {
         color: $soft-blue;
-        margin-left: 2rem;
+        font-weight: 100;
+        line-height: 24px;
+        @extend %margin-left-bottom;
     }
 
     &__content-right {
@@ -57,37 +75,68 @@ $white: hsl(0, 0%, 100%);
 
     &__infos {
         display: flex;
-        margin-left: 2rem;
-        margin-right: 2rem;
-        justify-content: space-between;
         flex-direction: row;
+        justify-content: space-between;
+        @extend %margin-left-bottom;
+        margin-right: 20px;
     }
 
     &__infos-numbers {
-        width: 35%;
         display: flex;
+        width: 35%;
+    }
+
+    &__break {
+        box-sizing: border-box;
+        border-bottom: 0.1em solid $dark-blue-line;
+        margin-left: 20px;
+        width: 90%;
+    }
+
+    &__icon-ether {
+        margin-right: 8px;
+    }
+
+    &__content-left {
+        color: $cyan;
+    }
+
+    &__icon-clock {
+        margin-right: 8px;
+    }
+
+    &__content-right {
+        color: $soft-blue
     }
 
     &__infos-person {
-        display: flex;
-        margin-left: 2rem;
         align-items: center;
+        display: flex;
+        @extend %margin-left-bottom;
+        margin-top: 20px;
     }
 
     &__infos___img {
-        display: flex;
-        flex-direction: row;
-        width: 32px;
-        height: 32px;
         border-radius: 50%;
         border: 1px solid $white;
+        display: flex;
+        flex-direction: row;
+        height: 32px;
+        margin-right: 20px;
+        width: 32px;
     }
 
     &__infos___content {
-        display: flex;
-        width: 20%;
         color: $soft-blue;
+        display: flex;
+        flex-grow: 0;
+        width: 50%;
+        @include fontSize(16px);
     }
 
+    
+    &__infos___content-state {
+        color:$white;
+        margin-left: 3px;
+    }
 }
-

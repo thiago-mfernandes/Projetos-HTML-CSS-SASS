@@ -1,9 +1,12 @@
+.card__infos-person, .card__infos, .card__content, .card__title {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
 .body {
   align-items: center;
   background-color: #0d192b;
   display: flex;
-  font-family: "Outfit", "Helvetica", sans-serif;
-  font-size: 18px;
   justify-content: center;
 }
 
@@ -17,58 +20,84 @@
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+  font-family: "Outfit", "Montserrat", sans-serif;
   flex-wrap: nowrap;
   justify-content: center;
-  margin-top: 20%;
-  margin-left: 2rem;
-  width: 350px;
+  margin: 60px 20px 60px 20px;
+  width: 375px;
+  font-size: 1.125rem;
 }
 .card__img {
   box-sizing: border-box;
-  border-radius: 20px;
-  margin: 2rem;
+  border-radius: 10px;
+  margin: 20px;
   width: 90%;
 }
 .card__title {
   color: white;
   font-weight: 600;
-  margin-left: 2rem;
+  font-size: 1.5rem;
 }
 .card__content {
   color: #8bacda;
-  margin-left: 2rem;
+  font-weight: 100;
+  line-height: 24px;
 }
 .card__content-right {
   text-align: right;
 }
 .card__infos {
   display: flex;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  justify-content: space-between;
   flex-direction: row;
+  justify-content: space-between;
+  margin-right: 20px;
 }
 .card__infos-numbers {
-  width: 35%;
   display: flex;
+  width: 35%;
+}
+.card__break {
+  box-sizing: border-box;
+  border-bottom: 0.1em solid #2f415b;
+  margin-left: 20px;
+  width: 90%;
+}
+.card__icon-ether {
+  margin-right: 8px;
+}
+.card__content-left {
+  color: #00fff7;
+}
+.card__icon-clock {
+  margin-right: 8px;
+}
+.card__content-right {
+  color: #8bacda;
 }
 .card__infos-person {
-  display: flex;
-  margin-left: 2rem;
   align-items: center;
+  display: flex;
+  margin-top: 20px;
 }
 .card__infos___img {
-  display: flex;
-  flex-direction: row;
-  width: 32px;
-  height: 32px;
   border-radius: 50%;
   border: 1px solid white;
+  display: flex;
+  flex-direction: row;
+  height: 32px;
+  margin-right: 20px;
+  width: 32px;
 }
 .card__infos___content {
-  display: flex;
-  width: 20%;
   color: #8bacda;
+  display: flex;
+  flex-grow: 0;
+  width: 50%;
+  font-size: 1rem;
+}
+.card__infos___content-state {
+  color: white;
+  margin-left: 3px;
 }
 
 /*# sourceMappingURL=style.css.map */
