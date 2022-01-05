@@ -20,7 +20,7 @@ function movimentaRaqueteJogador(e) {
 };
 
 function movimentaRaqueteOponente() {
-    raqueteOponente.velocidadeY = bola.y - (raqueteOponente.y - 10) - raqueteOponente.height / 2 + 30;
+    raqueteOponente.velocidadeY = bola.y - (raqueteOponente.y + 30) - raqueteOponente.height / 2 + 30;
     raqueteOponente.y += raqueteOponente.velocidadeY;
 };
 
@@ -55,6 +55,8 @@ const raqueteOponente = new Element({
     width: 15,
     height: 70,
     color: "#000",
+    velocidadeX: 3,
+    velocidadeY: 3,
     gravidade: 2,
 });
 
@@ -127,9 +129,9 @@ function loop() {
     window.requestAnimationFrame(loop)
 }
 
-desenharElemento(raqueteJogador);
-desenharElemento(raqueteOponente);
-desenharElemento(bola);
+//desenharElemento(raqueteJogador);
+//desenharElemento(raqueteOponente);
+//desenharElemento(bola);
 
 
 loop();
