@@ -1,0 +1,133 @@
+//Colors: Primary:
+$azul-palido: hsl(225, 100%, 94%);
+$azul-brilhante: hsl(245, 75%, 52%);
+//Neutral colors:
+$azul-muito-palido: hsl(225, 100%, 98%);
+$azul-desaturado: hsl(224, 23%, 55%);
+$azul-escuro: hsl(223, 47%, 23%);
+//placeholder
+%position-flex{ display: flex; justify-content: center;}
+
+//function and mixin calcRem
+
+@function calculaRem($size) {
+    @return calc($size / 16px) * 1rem;
+}
+
+@mixin fontSize($size) {
+    font-size: calculaRem($size);
+}
+
+.fundo {
+    background-image: url(../images/pattern-background-mobile.svg);
+}
+
+.componente {
+    font-family: 'Red Hat Display', sans-serif;
+    @include fontSize(16px);
+    box-sizing: border-box;
+    border-radius: 16px;
+    width: 90%;
+    height: 550px;
+    margin: 25px auto;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &__box {
+        padding: 20px;
+        width: 88%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__imagem {
+        width: 100%;
+        height: 27%;
+        border-radius: 16px 16px 0 0;
+    }
+
+    &__titulo {
+        text-align: center;
+        font-weight: 900;
+        @include fontSize(22px);
+        color: black;
+        margin: 10px 0 10px 0;
+    }
+
+    &__conteudo {
+        color: $azul-desaturado;
+        text-align: center;
+        @include fontSize(16px);
+        font-weight: 500;
+        line-height: 1.5rem;
+        margin: .5rem;
+    }
+
+    &__info-pagamento {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        box-sizing: border-box;
+        border-radius: 16px;
+        background-color: $azul-muito-palido;
+        height: 5rem;
+        margin: 1.25rem 0 1.25rem 0;
+        padding: .75rem;
+    }
+
+    &__botao-play {
+        box-sizing: border-box;
+        border: none;
+        border-radius: 50%;
+        background-color: $azul-palido;
+        width: 48px;
+        height: 48px;
+        margin: 0 20px 0 12px;
+    }
+
+    &__descricao {
+        margin-right: 50px;
+        @include fontSize(14px);
+    }
+
+    &__descricao___titulo {
+        margin-bottom: .5rem;
+        color: black;
+        font-weight: 900;
+    }
+
+    &__descricao___subtitulo {
+        color: $azul-desaturado;
+    }
+
+    &__descricao___link {
+        @include fontSize(12px);
+        font-weight: 900;
+    }
+
+    &__botao {
+        box-sizing: border-box;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0px 10px 30px 0px $azul-desaturado;
+        background-color: $azul-brilhante;
+        height: 3rem;
+        color: white;
+        @include fontSize(14px);
+        font-weight: 600;
+        
+    }
+
+    .pagar {
+        margin-bottom: 1rem;
+    }
+
+    .cancelar {
+        background-color: initial;
+        color: $azul-desaturado;
+        box-shadow: initial;
+    }
+}
