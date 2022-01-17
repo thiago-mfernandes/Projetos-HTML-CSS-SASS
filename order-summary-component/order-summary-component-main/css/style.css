@@ -1,75 +1,118 @@
+/*  -------------------------------------------------------------------------------------------  */
 .fundo {
+  background-color: #f5f7ff;
   background-image: url(../images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+}
+@media (min-width: 1439.98px) {
+  .fundo {
+    background-color: #e0e8ff;
+    background-size: cover;
+  }
 }
 
 .componente {
-  font-family: "Red Hat Display", sans-serif;
-  font-size: 1rem;
-  box-sizing: border-box;
-  border-radius: 16px;
-  width: 90%;
-  height: 550px;
-  margin: 25px auto;
   background-color: white;
+  border-radius: 16px;
+  box-sizing: border-box;
+  box-shadow: 0px 25px 25px 0px #d9d7fa;
   display: flex;
-  justify-content: center;
+  font-family: "Red Hat Display", sans-serif;
   flex-direction: column;
+  height: 550px;
+  justify-content: center;
+  margin: 25px auto;
+  width: 90%;
+  font-size: 1rem;
+}
+@media (min-width: 1439.98px) {
+  .componente {
+    height: 75%;
+    margin-top: 12.5%;
+    width: 30%;
+  }
 }
 .componente__box {
-  padding: 20px;
-  width: 88%;
-  height: 70%;
   display: flex;
   flex-direction: column;
+  height: 70%;
+  padding: 20px;
+  width: 88%;
+}
+@media (min-width: 1439.98px) {
+  .componente__box {
+    width: 91%;
+  }
 }
 .componente__imagem {
-  width: 100%;
-  height: 27%;
   border-radius: 16px 16px 0 0;
+  height: 27%;
+  width: 100%;
 }
 .componente__titulo {
-  text-align: center;
+  color: #1f2f56;
   font-weight: 900;
-  font-size: 1.375rem;
-  color: black;
   margin: 10px 0 10px 0;
+  text-align: center;
+  font-size: 1.375rem;
+}
+@media (min-width: 1439.98px) {
+  .componente__titulo {
+    font-size: 1.625rem;
+  }
 }
 .componente__conteudo {
   color: #7280a7;
-  text-align: center;
-  font-size: 1rem;
   font-weight: 500;
   line-height: 1.5rem;
   margin: 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+}
+@media (min-width: 1439.98px) {
+  .componente__conteudo {
+    margin: 0.5rem 1rem;
+    font-size: 1rem;
+  }
 }
 .componente__info-pagamento {
-  display: flex;
-  justify-content: flex-start;
   align-items: center;
-  box-sizing: border-box;
-  border-radius: 16px;
   background-color: #f5f7ff;
+  border-radius: 16px;
+  box-sizing: border-box;
+  display: flex;
   height: 5rem;
+  justify-content: flex-start;
   margin: 1.25rem 0 1.25rem 0;
   padding: 0.75rem;
 }
+@media (min-width: 1439.98px) {
+  .componente__info-pagamento {
+    margin: 1.5rem;
+  }
+}
 .componente__botao-play {
-  box-sizing: border-box;
+  background-color: #e0e8ff;
   border: none;
   border-radius: 50%;
-  background-color: #e0e8ff;
-  width: 48px;
+  box-sizing: border-box;
   height: 48px;
   margin: 0 20px 0 12px;
+  width: 48px;
 }
 .componente__descricao {
   margin-right: 50px;
   font-size: 0.875rem;
 }
+@media (min-width: 1439.98px) {
+  .componente__descricao {
+    margin-right: 100px;
+  }
+}
 .componente__descricao___titulo {
-  margin-bottom: 0.5rem;
-  color: black;
+  color: #1f2f56;
   font-weight: 900;
+  margin-bottom: 0.5rem;
 }
 .componente__descricao___subtitulo {
   color: #7280a7;
@@ -78,24 +121,59 @@
   font-size: 0.75rem;
   font-weight: 900;
 }
+.componente__descricao___link :hover {
+  color: #7280a7;
+  cursor: pointer;
+  text-decoration: none;
+}
 .componente__botao {
-  box-sizing: border-box;
+  background-color: #3829e0;
   border: none;
   border-radius: 8px;
-  box-shadow: 0px 10px 30px 0px #7280a7;
-  background-color: #3829e0;
-  height: 3rem;
+  box-sizing: border-box;
+  box-shadow: 0px 25px 25px 0px #d9d7fa;
   color: white;
-  font-size: 0.875rem;
+  height: 3rem;
   font-weight: 600;
+  font-size: 0.875rem;
+}
+@media (min-width: 1439.98px) {
+  .componente__botao {
+    margin: 1.5rem;
+    margin-top: 0.25rem;
+  }
+}
+.componente__botao :hover {
+  cursor: pointer;
+  background-color: #7280a7;
+  color: white;
 }
 .componente .pagar {
   margin-bottom: 1rem;
 }
+@media (min-width: 1439.98px) {
+  .componente .pagar {
+    margin-bottom: 0.25rem;
+  }
+}
 .componente .cancelar {
   background-color: initial;
-  color: #7280a7;
   box-shadow: initial;
+  color: #7280a7;
+}
+@media (min-width: 1439.98px) {
+  .componente .cancelar {
+    margin-bottom: 0.25rem;
+  }
+}
+.componente .cancelar :hover {
+  cursor: pointer;
+  color: #1f2f56;
+}
+
+.fa-music {
+  color: #7280a7;
+  font-size: 18px;
 }
 
 /*# sourceMappingURL=style.css.map */

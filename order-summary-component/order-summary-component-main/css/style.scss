@@ -1,15 +1,12 @@
-//Colors: Primary:
-$azul-palido: hsl(225, 100%, 94%);
+//Cores Primarias:
 $azul-brilhante: hsl(245, 75%, 52%);
-//Neutral colors:
-$azul-muito-palido: hsl(225, 100%, 98%);
+$azul-palido: hsl(225, 100%, 94%);
+//Cores Neutras:
 $azul-desaturado: hsl(224, 23%, 55%);
 $azul-escuro: hsl(223, 47%, 23%);
-//placeholder
-%position-flex{ display: flex; justify-content: center;}
+$azul-muito-palido: hsl(225, 100%, 98%);
 
-//function and mixin calcRem
-
+//Função calcular REM e Mixin da Função:
 @function calculaRem($size) {
     @return calc($size / 16px) * 1rem;
 }
@@ -18,85 +15,126 @@ $azul-escuro: hsl(223, 47%, 23%);
     font-size: calculaRem($size);
 }
 
+//Responsividade
+@mixin desktop-only {
+    @media  (min-width: 1439.98px) { @content;}
+}
+/*  -------------------------------------------------------------------------------------------  */
 .fundo {
-    background-image: url(../images/pattern-background-mobile.svg);
+    background-color: $azul-muito-palido;
+    background-image: url(../images/pattern-background-mobile.svg) ;
+    background-repeat: no-repeat;
+    @include desktop-only {
+        background-color: $azul-palido;
+        background-size: cover;
+    }
 }
 
 .componente {
-    font-family: 'Red Hat Display', sans-serif;
-    @include fontSize(16px);
-    box-sizing: border-box;
-    border-radius: 16px;
-    width: 90%;
-    height: 550px;
-    margin: 25px auto;
     background-color: white;
+    border-radius: 16px;
+    box-sizing: border-box;
+    box-shadow: 0px 25px 25px 0px #d9d7fa;
     display: flex;
-    justify-content: center;
+    font-family: 'Red Hat Display', sans-serif;
     flex-direction: column;
+    height: 550px;
+    justify-content: center;
+    margin: 25px auto;
+    width: 90%;
+    @include fontSize(16px);
+
+    //Responsivo:
+    @include desktop-only {
+        height: 75%;
+        margin-top: 12.5%;
+        width: 30%;
+    }
+
 
     &__box {
-        padding: 20px;
-        width: 88%;
-        height: 70%;
         display: flex;
         flex-direction: column;
+        height: 70%;
+        padding: 20px;
+        width: 88%;
+        //Responsivo:
+        @include desktop-only {
+            width: 91%;
+        }
     }
 
     &__imagem {
-        width: 100%;
-        height: 27%;
         border-radius: 16px 16px 0 0;
+        height: 27%;
+        width: 100%;
     }
 
     &__titulo {
-        text-align: center;
+        color: $azul-escuro;
         font-weight: 900;
-        @include fontSize(22px);
-        color: black;
         margin: 10px 0 10px 0;
+        text-align: center;
+        @include fontSize(22px);
+        //Responsivo:
+        @include desktop-only {
+            @include fontSize(26px);
+        }
     }
 
     &__conteudo {
         color: $azul-desaturado;
-        text-align: center;
-        @include fontSize(16px);
         font-weight: 500;
         line-height: 1.5rem;
         margin: .5rem;
+        text-align: center;
+        @include fontSize(16px);
+        //Responsivo:
+        @include desktop-only {
+            margin: .5rem 1rem;
+            @include fontSize(16px)
+        }
     }
 
     &__info-pagamento {
-        display: flex;
-        justify-content: flex-start;
         align-items: center;
-        box-sizing: border-box;
-        border-radius: 16px;
         background-color: $azul-muito-palido;
+        border-radius: 16px;
+        box-sizing: border-box;
+        display: flex;
         height: 5rem;
+        justify-content: flex-start;
         margin: 1.25rem 0 1.25rem 0;
         padding: .75rem;
+        //Responsivo:
+        @include desktop-only {
+            margin: 1.5rem;
+        }
     }
 
     &__botao-play {
-        box-sizing: border-box;
+        background-color: $azul-palido;
         border: none;
         border-radius: 50%;
-        background-color: $azul-palido;
-        width: 48px;
+        box-sizing: border-box;
         height: 48px;
         margin: 0 20px 0 12px;
+        width: 48px;
     }
 
     &__descricao {
         margin-right: 50px;
         @include fontSize(14px);
+        //Responsivo:
+        @include desktop-only {
+            margin-right: 100px;
+        }
     }
 
     &__descricao___titulo {
-        margin-bottom: .5rem;
-        color: black;
+        color: $azul-escuro;
         font-weight: 900;
+        margin-bottom: .5rem;
     }
 
     &__descricao___subtitulo {
@@ -106,28 +144,63 @@ $azul-escuro: hsl(223, 47%, 23%);
     &__descricao___link {
         @include fontSize(12px);
         font-weight: 900;
+        //Estado ativo:
+        :hover {
+            color: $azul-desaturado;
+            cursor: pointer;
+            text-decoration: none;
+        }
     }
 
     &__botao {
-        box-sizing: border-box;
+        background-color: $azul-brilhante;
         border: none;
         border-radius: 8px;
-        box-shadow: 0px 10px 30px 0px $azul-desaturado;
-        background-color: $azul-brilhante;
-        height: 3rem;
+        box-sizing: border-box;
+        box-shadow: 0px 25px 25px 0px #d9d7fa;
         color: white;
-        @include fontSize(14px);
+        height: 3rem;
         font-weight: 600;
-        
+        @include fontSize(14px);
+        //Responsivo:
+        @include desktop-only {
+            margin: 1.5rem;
+            margin-top: .25rem;
+        }
+        //Estado ativo:
+        :hover {
+            cursor: pointer;
+            background-color: $azul-desaturado;
+            color: white;
+        }
     }
 
     .pagar {
         margin-bottom: 1rem;
+        //Responsivo:
+        @include desktop-only {
+            margin-bottom: .25rem;
+        }
     }
 
     .cancelar {
         background-color: initial;
-        color: $azul-desaturado;
         box-shadow: initial;
+        color: $azul-desaturado;
+        //Responsivo:
+        @include desktop-only {
+            margin-bottom: .25rem;
+        }
+        //Estado ativo:
+        :hover {
+            cursor: pointer;
+            color: $azul-escuro;
+        }
     }
+}
+
+//Font Awesome:
+.fa-music {
+    color: $azul-desaturado;
+    font-size: 18px;
 }
