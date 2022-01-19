@@ -1,5 +1,174 @@
+//colors:
+    //main background
+    $dark-blue-background: hsl(233, 47%, 7%);
+    //card background
+    $dark-desaturated-blue: hsl(244, 38%, 16%);
+    //sublinhado
+    $soft-violet: hsl(277, 64%, 61%);
+    $soft-violet2: hsl(277, 91%, 36%);
+    //main heading, stats
+    $white: hsl(0, 0%, 100%);
+    //main paragraph
+    $slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+    //stat headings
+    $slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
 
-body {    
-    //font-family: 'Inter', sans-serif;
-    //font-family: 'Lexend Deca', sans-serif;
+//font-family: 'Inter', sans-serif;
+//font-family: 'Lexend Deca', sans-serif;
+
+//mixin para textos: 
+@mixin text-style ($color, $font-family, $font-size, $text-align, $margin, $padding) {
+    color: $color;
+    font-family: $font-family;
+    font-size: $font-size;
+    text-align: $text-align;
+    margin: $margin;
+    padding: $padding;
+}
+//mixin para imagens:
+@mixin img-style ($width, $background-color, $margin) {
+    width: $width;
+    background-color: $background-color;
+    margin: $margin;
+}
+//mixin flexbox:
+@mixin flexbox ($display, $flex-direction) {
+    display: $display;
+    flex-direction: $flex-direction;
+}
+
+//Responsivo
+@mixin desktop-only {
+    @media (min-width: 1439.98px) {
+        @content;
+    }
+}
+
+
+.main-background {    
+    background-color: $dark-blue-background;
+    width: 100%;
+}
+
+.card {
+    
+    @include img-style(90%, $dark-desaturated-blue, 3rem auto);
+    border-radius: 8px;
+    box-sizing: border-box;
+    height: 100%;
+    //Responsivo:
+    @include desktop-only {
+        
+        @include flexbox(flex, row-reverse);
+        height: 56.5vh;
+        margin: 25vh auto;
+        width: 80%;
+        
+    }
+
+    &__img {
+
+        @include img-style(100%, $soft-violet2, 0);
+        border: none;
+        border-radius: 8px 8px 0 0px;
+        filter: opacity(0.9);
+        height: 100%;
+        //Responsivo:
+        @include desktop-only {
+            width: 55%;
+        }
+    }
+
+    &__img___img {
+        border-radius: 8px 8px 0 0px;
+        filter: opacity(55%);
+        width: 100%;
+    }
+
+    &__info {
+        @include desktop-only {
+
+            @include flexbox(flex, column);
+            justify-content: space-between;
+            padding: 3rem 0 3rem 3rem;
+            width: 50%;
+        }
+    }
+
+    &__titulo {
+        
+        @include text-style($white, 'Lexend Deca', 32px, center, 1.5rem 1rem 1rem 1rem, .5rem);
+        //Responsivo: 
+        @include desktop-only {
+            @include text-style($white, 'Lexend Deca', 44px, left, .75rem 0 0 0, .25rem);
+            width: 90%;
+        }
+    }
+
+    &__titulo span {
+        color: $soft-violet;
+    }
+
+    &__conteudo {
+        
+        @include text-style($white, 'Inter', 16px, center, 0 1rem 1rem 1rem, .5rem);
+        line-height: 1.5rem;
+        filter: opacity(75%);
+        //Responsivo: 
+        @include desktop-only {
+
+            @include text-style($white, 'Inter', 20px, left, 1.5rem 0, 0);
+            line-height: 2rem;
+            width: 88%;
+        }
+    }
+
+    &__beneficios {
+
+        @include flexbox(flex, column);    
+        align-items: center;
+        margin: 2rem 0;
+        width: 100%;
+        //Responsivo:
+        @include desktop-only {
+            
+            @include flexbox(inherit, row);
+            justify-content: space-between;
+            margin: 2rem 0 1rem 0;
+            width: 88%;
+        }
+    }
+
+    &__beneficios-bloco {
+        margin-bottom: 2rem;
+        //Responsivo: 
+        @include desktop-only {
+            margin-bottom: 0;
+        }
+    }
+
+    &__beneficios___titulo {
+
+        @include text-style($white, 'Inter', 24px, center, 0 0 1rem 0, 0);        
+        width: 100%;
+        //Responsivo: 
+        @include desktop-only {
+            font-size: 32px;
+            font-weight: 700;
+            text-align: left;
+        }
+    }
+
+    &__beneficios___conteudo {
+
+        @include text-style($white, 'Inter', 12px, center, 0, 0);
+        font-weight: 400;
+        opacity: 50%;
+        text-transform: uppercase;
+        width: 100%;
+        //Responsivo: 
+        @include desktop-only {
+            font-size: 18px;
+        }
+    }
 }

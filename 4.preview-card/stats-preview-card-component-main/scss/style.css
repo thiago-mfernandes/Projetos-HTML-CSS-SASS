@@ -1,3 +1,153 @@
+.main-background {
+  background-color: #090b1a;
+  width: 100%;
+}
 
+.card {
+  width: 90%;
+  background-color: #1b1938;
+  margin: 3rem auto;
+  border-radius: 8px;
+  box-sizing: border-box;
+  height: 100%;
+}
+@media (min-width: 1439.98px) {
+  .card {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 56.5vh;
+    margin: 25vh auto;
+    width: 80%;
+  }
+}
+.card__img {
+  width: 100%;
+  background-color: #6f08af;
+  margin: 0;
+  border: none;
+  border-radius: 8px 8px 0 0px;
+  filter: opacity(0.9);
+  height: 100%;
+}
+@media (min-width: 1439.98px) {
+  .card__img {
+    width: 55%;
+  }
+}
+.card__img___img {
+  border-radius: 8px 8px 0 0px;
+  filter: opacity(55%);
+  width: 100%;
+}
+@media (min-width: 1439.98px) {
+  .card__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem 0 3rem 3rem;
+    width: 50%;
+  }
+}
+.card__titulo {
+  color: white;
+  font-family: "Lexend Deca";
+  font-size: 32px;
+  text-align: center;
+  margin: 1.5rem 1rem 1rem 1rem;
+  padding: 0.5rem;
+}
+@media (min-width: 1439.98px) {
+  .card__titulo {
+    color: white;
+    font-family: "Lexend Deca";
+    font-size: 44px;
+    text-align: left;
+    margin: 0.75rem 0 0 0;
+    padding: 0.25rem;
+    width: 90%;
+  }
+}
+.card__titulo span {
+  color: #aa5cdb;
+}
+.card__conteudo {
+  color: white;
+  font-family: "Inter";
+  font-size: 16px;
+  text-align: center;
+  margin: 0 1rem 1rem 1rem;
+  padding: 0.5rem;
+  line-height: 1.5rem;
+  filter: opacity(75%);
+}
+@media (min-width: 1439.98px) {
+  .card__conteudo {
+    color: white;
+    font-family: "Inter";
+    font-size: 20px;
+    text-align: left;
+    margin: 1.5rem 0;
+    padding: 0;
+    line-height: 2rem;
+    width: 88%;
+  }
+}
+.card__beneficios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+  width: 100%;
+}
+@media (min-width: 1439.98px) {
+  .card__beneficios {
+    display: inherit;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2rem 0 1rem 0;
+    width: 88%;
+  }
+}
+.card__beneficios-bloco {
+  margin-bottom: 2rem;
+}
+@media (min-width: 1439.98px) {
+  .card__beneficios-bloco {
+    margin-bottom: 0;
+  }
+}
+.card__beneficios___titulo {
+  color: white;
+  font-family: "Inter";
+  font-size: 24px;
+  text-align: center;
+  margin: 0 0 1rem 0;
+  padding: 0;
+  width: 100%;
+}
+@media (min-width: 1439.98px) {
+  .card__beneficios___titulo {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: left;
+  }
+}
+.card__beneficios___conteudo {
+  color: white;
+  font-family: "Inter";
+  font-size: 12px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  opacity: 50%;
+  text-transform: uppercase;
+  width: 100%;
+}
+@media (min-width: 1439.98px) {
+  .card__beneficios___conteudo {
+    font-size: 18px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
