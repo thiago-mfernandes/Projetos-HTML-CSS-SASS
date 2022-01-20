@@ -1,0 +1,123 @@
+//Cores
+$dark-cyan: hsl(185, 75%, 39%);
+$very-dark-desaturated-blue: hsl(229, 23%, 23%);
+$dark-grayish-blue: hsl(227, 10%, 46%);
+//neutro-cinza
+$dark-gray: hsl(0, 0%, 59%);
+
+@mixin desktop {
+    @media (min-width: 1439.98px) {
+        @content;
+    }
+}
+
+body {
+    background-color: hsl(185, 75%, 39%);
+    background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-top.svg);
+    background-position: top 380px left 1005px, bottom 120px right 170px;
+    background-repeat: no-repeat;
+    font-family: 'Kumbh Sans', sans-serif;
+    @include desktop {
+        background-position: top 530px left 650px, bottom 530px right 600px;
+    }
+}
+
+.profile {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0px 20px 35px 0px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    height: 72vh;
+    margin: 7rem auto;
+    width: 95%;
+    @include desktop {
+        height: 40vh;
+        margin: 20% auto;
+        width: 25%;
+    }
+
+    &__background___img {
+        border-radius: 16px 16px 0 0;
+        width: 100%;
+    }
+
+    &__info {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+        height: 10vh;
+        margin-top: -10%;
+        margin-left: 30%;
+        width: 45%;
+        @include desktop {
+            height: 6vh;
+        }
+    }
+
+    &__img {
+        border: 5px solid white;
+        border-radius: 50%;
+        left: 120px;
+        position: relative;
+        top: -60px;
+        width: 30%;
+    }
+
+    &__title {
+        display: flex;
+        margin: .5rem 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    &__name {
+        color: $very-dark-desaturated-blue;
+        font-weight: 700;
+    }
+
+    &__age {
+        color: $dark-gray;
+        font-weight: 400;
+        margin-left: .5rem;
+    }
+
+    &__city {
+        color: $dark-gray;
+        font-size: 14px;
+        margin-left: -10px;
+        text-align: center;
+    }
+
+    &__divisor {
+        border-top: 1px solid $dark-gray;
+        margin: 1rem 0;
+        opacity: .2;
+    }
+
+    &__status {
+        display: flex;   
+        justify-content: space-around; 
+        margin: 7.5% 0;    
+    }
+
+    &__status-box {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+    }
+
+    &__number-indicators {
+        color: $very-dark-desaturated-blue;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    &__indicators {
+        color: $dark-gray;
+        font-size: 10px;
+        letter-spacing: .1rem;
+        margin-top: .5rem;
+    }
+}

@@ -1,0 +1,106 @@
+body {
+  background-color: #19a2ae;
+  background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-top.svg);
+  background-position: top 380px left 1005px, bottom 120px right 170px;
+  background-repeat: no-repeat;
+  font-family: "Kumbh Sans", sans-serif;
+}
+@media (min-width: 1439.98px) {
+  body {
+    background-position: top 530px left 650px, bottom 530px right 600px;
+  }
+}
+
+.profile {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0px 20px 35px 0px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  height: 72vh;
+  margin: 7rem auto;
+  width: 95%;
+}
+@media (min-width: 1439.98px) {
+  .profile {
+    height: 40vh;
+    margin: 20% auto;
+    width: 25%;
+  }
+}
+.profile__background___img {
+  border-radius: 16px 16px 0 0;
+  width: 100%;
+}
+.profile__info {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  height: 10vh;
+  margin-top: -10%;
+  margin-left: 30%;
+  width: 45%;
+}
+@media (min-width: 1439.98px) {
+  .profile__info {
+    height: 6vh;
+  }
+}
+.profile__img {
+  border: 5px solid white;
+  border-radius: 50%;
+  left: 120px;
+  position: relative;
+  top: -60px;
+  width: 30%;
+}
+.profile__title {
+  display: flex;
+  margin: 0.5rem 0;
+  text-align: center;
+  width: 100%;
+}
+.profile__name {
+  color: #2d3248;
+  font-weight: 700;
+}
+.profile__age {
+  color: #969696;
+  font-weight: 400;
+  margin-left: 0.5rem;
+}
+.profile__city {
+  color: #969696;
+  font-size: 14px;
+  margin-left: -10px;
+  text-align: center;
+}
+.profile__divisor {
+  border-top: 1px solid #969696;
+  margin: 1rem 0;
+  opacity: 0.2;
+}
+.profile__status {
+  display: flex;
+  justify-content: space-around;
+  margin: 7.5% 0;
+}
+.profile__status-box {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+.profile__number-indicators {
+  color: #2d3248;
+  font-size: 20px;
+  font-weight: 700;
+}
+.profile__indicators {
+  color: #969696;
+  font-size: 10px;
+  letter-spacing: 0.1rem;
+  margin-top: 0.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
