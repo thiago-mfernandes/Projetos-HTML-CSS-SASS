@@ -1,0 +1,80 @@
+
+.social {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+        width: 75%;
+        height: 40%;
+        flex-direction: row;
+        margin: 2.5% auto;
+        align-items: center;
+    }
+
+    &__card {
+        box-sizing: border-box;
+        width: 95%;
+        height: 40vh;
+        background-color: $very-dark-magenta;
+        border-radius: 8px;
+        padding: 2rem 1.5rem;
+        margin: .5rem auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include desktop {
+            width: 32%;
+            height: 85%;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: .5rem;
+    }
+
+    &__img {
+        border-radius: 50%;
+        width: 12%;
+        margin-right: 1.5rem;
+    }
+
+    &__info-box {
+        justify-content: flex-start;
+    }
+
+    &__card___name {
+        color: $white;
+        font-weight: 500;
+        margin-bottom: .3rem;
+        @include fontSize(13px);
+    }
+
+    &__card___buyer {
+        color: $soft-pink;
+        opacity: .7;
+        @include fontSize(13px);
+    }
+
+    &__media___testemonial {
+        color: $white;
+        font-weight: 400;
+        line-height: 1.5rem;
+        @include desktop {
+            @include fontSize(16px);
+        }
+    }
+}
+
+.social__card:first-child {
+    align-self: flex-start;
+}
+
+.social__card:last-child {
+    align-self: flex-end;
+}

@@ -1,0 +1,35 @@
+//cores
+$very-dark-magenta: hsl(300, 43%, 22%);
+$soft-pink: hsl(333, 80%, 67%);
+//neutros
+$dark-grayish-magenta: hsl(303, 10%, 53%);
+$light-grayish-magenta: hsl(300, 24%, 96%);
+$white: hsl(0, 0%, 100%);
+
+@function calculaRem($size) {
+    @return $size / 16px * 1rem;
+}
+
+@mixin fontSize($size) {
+    font-size: calculaRem($size);
+}
+
+@mixin desktop {
+    @media (min-width: 1439.98px) {
+        @content;
+    }
+}
+
+body {
+    font-family: 'Spartan', sans-serif;
+    @include fontSize(15px);
+    background-image: url(../images/bg-pattern-top-mobile.svg),url(../images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top 0px left 0px, bottom 0px right 0px;
+
+    @include desktop {
+        background-image: none;
+    }
+}
+
+@import 'header', 'approval', 'social', 'desktop';

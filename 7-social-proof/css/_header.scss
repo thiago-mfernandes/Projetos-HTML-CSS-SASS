@@ -1,0 +1,47 @@
+
+.header {
+    height: 60vh;
+    padding: 1.5rem;
+    width: 100%;    
+    @include desktop {
+        width: 35%;
+        height: 90%;
+        padding: 1rem;
+        color: $white;
+        margin-top: 2.5rem;
+    }
+
+    &__title {
+        color: $very-dark-magenta;
+        font-weight: 700;
+        margin-top: 4rem;
+        text-align: center;
+        @include fontSize(34px);
+        @include desktop {
+            text-align: left;
+            @include fontSize(45px);
+        }
+    }
+
+    &__content {
+        color: $very-dark-magenta;
+        font-weight: 400;
+        line-height: 1.25rem;
+        margin-top: 2.5rem;
+        opacity: .7;
+        text-align: center;
+        @include fontSize(16px);
+        @include desktop {
+            text-align: left;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+.desktop-only {
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+    }
+}
