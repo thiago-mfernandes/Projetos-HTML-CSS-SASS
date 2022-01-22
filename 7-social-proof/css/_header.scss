@@ -3,12 +3,12 @@
     height: 60vh;
     padding: 1.5rem;
     width: 100%;    
-    @include desktop {
-        width: 35%;
+    @include for-desktop-only {
+        color: $white;
         height: 90%;
         padding: 1rem;
-        color: $white;
         margin-top: 2.5rem;
+        width: 35%;
     }
 
     &__title {
@@ -17,7 +17,7 @@
         margin-top: 4rem;
         text-align: center;
         @include fontSize(34px);
-        @include desktop {
+        @include for-desktop-only {
             text-align: left;
             @include fontSize(45px);
         }
@@ -31,16 +31,16 @@
         opacity: .7;
         text-align: center;
         @include fontSize(16px);
-        @include desktop {
-            text-align: left;
-            margin-top: 1.5rem;
+        @include for-desktop-only {
             margin-bottom: 1.5rem;
+            margin-top: 1.5rem;
+            text-align: left;
         }
     }
 }
 
 .desktop-only {
-    @include desktop {
+    @include for-desktop-only {
         display: flex;
         flex-direction: row;
     }

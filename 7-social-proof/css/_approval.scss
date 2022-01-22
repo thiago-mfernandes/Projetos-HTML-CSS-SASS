@@ -1,32 +1,32 @@
 
 .approval {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin-bottom: 3rem;
-    @include desktop {
-        width: 50%;
-        margin: 0;
-        justify-content: center;
+    @include for-desktop-only {
         align-items: center;
+        justify-content: center;
+        margin: 0;
+        width: 50%;
     }
 
     &__label {
-        box-sizing: border-box;
+        align-items: center;
         background-color: $light-grayish-magenta;
-        width: 95%;
-        height: 12vh;
         border-radius: 8px;
-        margin: .5rem auto;
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        height: 12vh;
         justify-content: center;
-        @include desktop {
-            width: 75%;
+        margin: .5rem auto;
+        width: 95%;
+        @include for-desktop-only {
             height: 12%;
             flex-direction: row;
             margin: .5rem 0;
+            width: 80%;
         }
     }
 
@@ -51,4 +51,3 @@
 .approval__label:last-child {
     align-self: flex-end;
 }
-

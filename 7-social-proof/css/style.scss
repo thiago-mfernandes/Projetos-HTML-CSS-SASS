@@ -14,7 +14,7 @@ $white: hsl(0, 0%, 100%);
     font-size: calculaRem($size);
 }
 
-@mixin desktop {
+@mixin for-desktop-only {
     @media (min-width: 1439.98px) {
         @content;
     }
@@ -26,8 +26,7 @@ body {
     background-image: url(../images/bg-pattern-top-mobile.svg),url(../images/bg-pattern-bottom-mobile.svg);
     background-repeat: no-repeat;
     background-position: top 0px left 0px, bottom 0px right 0px;
-
-    @include desktop {
+        @include for-desktop-only {
         background-image: none;
     }
 }
