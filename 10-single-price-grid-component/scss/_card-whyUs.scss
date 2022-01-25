@@ -1,0 +1,32 @@
+.card-whyUs {
+    background-color: $cyan;
+    border-radius: 0 0 8px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: .8;
+    @include for-desktop-only {
+        padding: 1.75rem 1.5rem 0;
+        width: 50%;
+        border-radius: 0 0 8px 0;
+    } 
+
+    &__title {
+        @include card-title(white, 18px, 700, 1.5rem 1.25rem);
+        @include for-desktop-only {
+            padding: 1rem 1rem 1.75rem 1rem;
+        }
+    }
+
+    &__content {
+        @include card-content(white, 14px, 400, .25rem 1.25rem);
+        opacity: .8;
+        @include for-desktop-only {
+            padding: .2rem 1rem;
+        }
+    }
+
+    &__content:last-child {
+        padding-bottom: 2rem;
+    }
+}

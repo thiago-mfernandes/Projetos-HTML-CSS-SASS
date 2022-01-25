@@ -1,0 +1,32 @@
+.card-join {
+    background-color: white;
+    border-radius: 8px 8px 0 0;
+    padding-bottom: 1.5rem;
+    @include for-desktop-only {
+        padding: 1.75rem 1.5rem;
+    }
+
+    &__title {
+        @include card-title ($cyan, 20px, 700, 2rem 1.25rem 1.25rem);
+        @include for-desktop-only {
+            @include card-title ($cyan, 24px, 700, 2rem 2rem .75rem)
+        }
+    }
+
+    &__content {
+        @include card-content ($bright-yellow, 16px, 400, 1rem 1.25rem .5rem);
+        @include for-desktop-only {
+            @include card-content ($bright-yellow, 20px, 700, 1rem 2rem .75rem);
+        }
+    }
+
+    &__content span {
+        color: $grayish-blue;
+        line-height: 1.75rem;
+        @include card-content ($grayish-blue, 14px, 400, 0);
+        @include for-desktop-only {
+            @include card-content ($grayish-blue, 16px, 400, 0);
+            margin-bottom: 1.5rem;
+        }
+    }
+}
