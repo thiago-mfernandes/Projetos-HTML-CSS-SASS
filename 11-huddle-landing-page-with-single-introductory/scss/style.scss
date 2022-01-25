@@ -1,0 +1,168 @@
+//colors
+$violet: hsl(257, 40%, 49%);
+$soft-magenta: hsl(300, 69%, 71%);
+
+@mixin for-desktop-only {
+    @media (min-width: 1439.98px) {
+        @content;
+    }
+}
+
+body {
+    background-color: $violet;
+    background-image: url('../images/bg-mobile.svg');
+    background-repeat: no-repeat;
+    @include for-desktop-only {
+        background-image: url('../images/bg-desktop.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;        
+    }
+}
+
+.logo {
+    margin: 10% 2.5% 10% 7.5%;
+    width: 35%;
+    @include for-desktop-only {
+        margin: 5% 5% 1.5%;
+        padding-right: 50%;
+        width: 15%;
+    }
+}
+
+.mockup {
+    margin: 5% auto;
+    width: 80%;
+    @include for-desktop-only {
+        margin: 2.5%;
+        width: 55%;
+    }
+}
+
+.info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    @include for-desktop-only {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__box {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.5rem;
+        @include for-desktop-only {
+            width: 40%;
+        }
+    }
+
+    &__title {
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.75rem;
+        margin: 1.25rem auto;
+        text-align: center;
+        width: 80%;
+        @include for-desktop-only {
+            font-size: 40px;
+            margin: 5rem 0 0;
+            line-height: 3.75rem;
+            text-align: left;
+            width: 90%;
+        }
+    }
+
+    &__content {
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        line-height: 1.5rem;
+        margin: 1.5rem 1rem;
+        text-align: center;
+        width: 89%;
+        @include for-desktop-only {
+            font-size: 18px;
+            line-height: 2rem;
+            margin: 1.5rem 2.5rem 1.5rem 2rem;
+            text-align: left;
+            width: 90%;
+        }
+    }
+
+    &__button {
+        border: none;
+        border-radius: 24px;
+        box-shadow: 1px 3px 10px 0px rgba(0,0,0,.4);
+        box-sizing: border-box;
+        color: $violet;
+        font-family: 'Poppins', sans-serif;
+        font-size: .7rem;
+        height: 2.5rem;
+        margin-bottom: 4rem;
+        width: 60%;
+        &:hover {
+            background-color: $soft-magenta;
+            color: white;
+            cursor: pointer;
+        }
+        @include for-desktop-only {
+            align-self: flex-start;
+            height: 3rem;
+            font-size: 1rem;
+            margin-left: 1.5rem;
+            margin-bottom: 37%;
+            width: 32.5%;
+        }
+    }
+}
+
+.social-contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 35%;
+    @include for-desktop-only {
+        justify-content: flex-end;
+        width: 80%;
+    }
+}
+
+.social-contact-box {
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    height: 2rem;
+    justify-content: center;
+    width: 2rem;
+    &:hover {
+        border: 1px solid $soft-magenta;
+        cursor: pointer;
+        
+        //variavel hover ativo criada;
+        $activeHover: true;
+        @if $activeHover == true {
+            [data-color-modifier] {
+                color: $soft-magenta;
+            }
+        }
+    }
+    @include for-desktop-only {
+        margin-left: 3%;
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+}
+
+.fa-facebook-f, .fa-twitter, .fa-instagram{
+    color: white;
+    font-size: 1rem;
+}
