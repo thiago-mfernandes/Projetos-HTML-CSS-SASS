@@ -1,5 +1,4 @@
-//variables
-
+//colors
 $cyan: hsl(178, 100%, 50%);
 $dark-blue-card: hsl(216, 50%, 16%);
 $dark-blue-body: hsl(217, 54%, 11%);
@@ -9,20 +8,9 @@ $white: hsl(0, 0%, 100%);
 
 //placeholders
 %margin-left-bottom {
-    margin-left: 20px;
     margin-bottom: 20px;
+    margin-left: 6%;
 }
-
-//function calculate Rem;
-@function calculateRem ($size) {
-    @return $size / 16px * 1rem;
-}
-
-//mixin function with font-size for best responsive layout:last-child
-@mixin fontSize($size) {
-    font-size: calculateRem($size);
-}
-
 
 .body{
     align-items: center;
@@ -37,35 +25,70 @@ $white: hsl(0, 0%, 100%);
 
 .card {
     background: $dark-blue-card;
-    box-sizing: border-box;
     border-radius: 20px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     font-family: 'Outfit', 'Montserrat', sans-serif;
+    font-size: 18px;
     flex-wrap: nowrap;
     justify-content: center;
-    margin: 60px 20px 60px 20px;
-    width: 375px;
-    @include fontSize(18px);
+    margin: 25% auto;
+    width: 90%;
 
     &__img {
         box-sizing: border-box;
         border-radius: 10px;
-        margin: 20px;
-        width: 90%;
+        margin: 6%;
+        width: 88%;
+    }
+
+    &__img-hover {
+        align-items: center;
+        display: flex;
+        /*
+        corresponde a propriedade e/ou; assume o valor da propriedade left;
+        neste caso, sendo 0, alinha o item ao centro da tela
+        */
+        inset: 0;
+        height: 48vh; //mexer aqui
+        justify-content: center;
+        margin: 12.5% auto; //mexer aqui
+        position: absolute;
+        //torna o item "invisível" em valor 0;
+        opacity: 0;
+        transition: 0.3s;
+        width: 33%; //mexer aqui
+        &:hover {
+            background-color: rgba(0, 255, 247, 0.7);
+            cursor: pointer;
+            opacity: 1;
+        }
+    }
+
+    &__img-hover-eye {
+        height: 2.75rem;
+        width: 2.75rem;
     }
 
     &__title {
         color: $white;
         font-weight: 600;
+        font-size: 24px;
         @extend %margin-left-bottom;
-        @include fontSize(24px);
+        &:hover {
+            color: $cyan;
+            cursor: pointer;
+        }        
     }
 
     &__content {
         color: $soft-blue;
+        font-size: 18px;
         font-weight: 100;
         line-height: 24px;
+        opacity: .9;
+        width: 85%;
         @extend %margin-left-bottom;
     }
 
@@ -82,8 +105,9 @@ $white: hsl(0, 0%, 100%);
     }
 
     &__infos-numbers {
+        align-items: center;
         display: flex;
-        width: 35%;
+        width: 40%;
     }
 
     &__break {
@@ -94,11 +118,13 @@ $white: hsl(0, 0%, 100%);
     }
 
     &__icon-ether {
+        height: 1.25rem;
         margin-right: 8px;
     }
 
     &__content-left {
         color: $cyan;
+        font-size: 1rem;
     }
 
     &__icon-clock {
@@ -130,13 +156,17 @@ $white: hsl(0, 0%, 100%);
         color: $soft-blue;
         display: flex;
         flex-grow: 0;
-        width: 50%;
-        @include fontSize(16px);
+        font-size: 16px;
+        width: 60%;        
     }
 
     
     &__infos___content-state {
         color:$white;
         margin-left: 3px;
+        &:hover {
+            color: $cyan;
+            cursor: pointer;
+        }
     }
 }
