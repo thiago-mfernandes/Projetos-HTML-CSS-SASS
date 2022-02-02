@@ -5,7 +5,7 @@ const faqs = document.querySelectorAll(".container");
 faqs.forEach(container => {
     //evento por pergunta
     container.addEventListener("click", () => {
-
+        console.log('fui clicado');
         //adicionar classe "ativo"
         container.classList.toggle("ativo");
     })
