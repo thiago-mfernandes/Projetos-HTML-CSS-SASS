@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+body {
+  box-sizing: border-box;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 1.125rem;
+}
+
+.header {
+  background-image: url("../images/bg-header-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20% 5%;
+  display: flex;
+  flex-direction: column;
+}
+.header__logo {
+  width: 40%;
+  align-self: center;
+  margin: 5% 0;
+}
+.header__title {
+  color: #4c545d;
+  font-size: 2rem;
+  margin: 7.5% 0;
+  font-weight: 700;
+  text-align: center;
+}
+
+.title {
+  color: #4c545d;
+  text-align: center;
+  font-size: 1.75rem;
+  margin: 5% 0;
+  line-height: 1.5rem;
+  font-weight: 700;
+  width: 80%;
+}
+
+.subtitle {
+  color: #4c545d;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 2.5% 0;
+  line-height: 1.5rem;
+  font-weight: 700;
+  width: 80%;
+}
+
+.description {
+  color: #9fabb2;
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 10%;
+  line-height: 1.65rem;
+  width: 80%;
+}
+
+.button-ios, .button-mac {
+  background-color: #26baa4;
+  border-radius: 30px;
+  height: 10vh;
+  color: white;
+  font-weight: 700;
+  opacity: 0.8;
+  border: none;
+  margin: 2.5% 0;
+  border-bottom: 3px solid rgba(35, 141, 123, 0.95);
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 1rem;
+  box-shadow: 0px 5px 25px 10px rgba(38, 186, 164, 0.3);
+  width: 100%;
+}
+
+.button-mac {
+  background-color: #6173ff;
+  border-bottom: 3px solid rgba(97, 115, 255, 0.5);
+  box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, 0.3);
+}
+
+.snippets {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.snippets__header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.snippets__img {
+  width: 85%;
+  align-self: center;
+  margin: 15% 0;
+}
+.snippets__content {
+  align-items: center;
+  height: 165vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.clipboard {
+  align-items: center;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+}
+.clipboard__img {
+  width: 95%;
+}
+
+.workflow {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.workflow__header, .workflow .workflow__itens {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 5% 0;
+}
+.workflow__brands {
+  align-items: center;
+  margin: 20% 0;
+  display: flex;
+  flex-direction: column;
+}
+.workflow__brands__logo {
+  width: 85%;
+  margin: 15% 0;
+}
+
+.clipboard-for {
+  align-items: center;
+  padding: 0 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,156 @@
+//Cores
+$strong-cyan: rgb(38, 186, 164);
+$light-blue: rgb(97, 115, 255);
+$button-mac-shadow: rgba(97, 115, 255, 0.5);
+$button-ios-shadow: rgba(35, 141, 123, 0.95);
+//Neutros
+$dark-grayish-blue: rgb(76, 84, 93);
+$grayish-blue: rgb(159, 171, 178);
+
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+@mixin display-direction ($display, $direction) {
+    display: $display;
+    flex-direction: $direction;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 1.125rem;
+}
+
+.header {
+    background-image: url('../images/bg-header-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20% 5%;
+    @include display-direction(flex, column);
+
+    &__logo {
+        width: 40%;
+        align-self: center;
+        margin: 5% 0;
+    }
+
+    &__title {
+        color: $dark-grayish-blue;
+        font-size: 2rem;
+        margin: 7.5% 0;
+        font-weight: 700;
+        text-align: center;
+    }
+}
+
+.title {
+    color: $dark-grayish-blue;
+    text-align: center;
+    font-size: 1.75rem;
+    margin: 5% 0;
+    line-height: 1.5rem;
+    font-weight: 700;
+    width: 80%;
+}
+
+.subtitle {
+    color: $dark-grayish-blue;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 2.5% 0;
+    line-height: 1.5rem;
+    font-weight: 700;
+    width: 80%;
+}
+
+.description {
+    color: $grayish-blue;
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 10%;
+    line-height: 1.65rem;
+    width: 80%;
+}
+
+.button-ios, .button-mac {
+    background-color: $strong-cyan;
+    border-radius: 30px;
+    height: 10vh;
+    color: white;
+    font-weight: 700;
+    opacity: .8;
+    border: none;
+    margin: 2.5% 0;
+    border-bottom: 3px solid $button-ios-shadow;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 1rem;
+    box-shadow: 0px 5px 25px 10px rgba(38, 186, 164, .3);
+    width: 100%;
+}
+
+.button-mac {
+    background-color: $light-blue;
+    border-bottom: 3px solid $button-mac-shadow;
+    box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, .3);
+}
+
+.snippets {
+    align-items: center;
+    @include display-direction(flex, column);
+
+    &__header {
+        align-items: center;
+        @include display-direction(flex, column);
+    }
+
+    &__img {
+        width: 85%;
+        align-self: center;      
+        margin: 15% 0;  
+    }
+
+    &__content {
+        align-items: center;
+        height: 165vh;
+        @include display-direction(flex, column);
+    }
+}
+
+.clipboard {
+    align-items: center;
+    height: 95vh;
+    @include display-direction(flex, column);
+
+    &__img {
+        width: 95%;
+    }
+}
+
+.workflow {
+    align-items: center;
+    @include display-direction(flex, column);
+
+    &__header, .workflow__itens {
+        align-items: center;
+        @include display-direction(flex, column);
+        margin: 5% 0;
+    }
+
+    &__brands {
+        align-items: center;
+        margin: 20% 0;
+        @include display-direction(flex, column);
+
+        &__logo {
+            width: 85%;
+            margin: 15% 0;
+        }
+    }
+}
+
+.clipboard-for {
+    align-items: center;
+    padding: 0 5%;
+    @include display-direction(flex, column);
+}
+
+//mobile, desktop, estados ativos-bototes-rodapelinks
