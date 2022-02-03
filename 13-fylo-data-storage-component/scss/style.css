@@ -1,0 +1,216 @@
+body {
+  background-image: url("../images/bg-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.875rem;
+}
+@media screen and (min-width: 1440px) {
+  body {
+    align-items: center;
+    background-color: #0c122c;
+    background-image: url("../images/bg-desktop.png");
+    background-position: left 0vw top 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+}
+
+.container {
+  height: 100%;
+  margin: 30% auto;
+  width: 90%;
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    margin: 10% auto;
+    width: 70%;
+  }
+}
+
+/* -------------------------------------------------------- */
+/*                Top section Style - mobile                */
+/*                Left section Style - desktop              */
+/* -------------------------------------------------------- */
+.card-logo {
+  background-color: #1d2c67;
+  border-radius: 12px 100px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  height: 22.5vh;
+  justify-content: space-between;
+  margin-bottom: 5%;
+  padding: 10%;
+}
+@media screen and (min-width: 1440px) {
+  .card-logo {
+    height: 12vh;
+    margin-bottom: 0;
+    padding: 4%;
+    width: 30%;
+  }
+}
+.card-logo__logo {
+  width: 50%;
+}
+.card-logo__boxes-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+}
+@media screen and (min-width: 1440px) {
+  .card-logo__boxes-container {
+    width: 65%;
+  }
+}
+.card-logo__box-icon {
+  align-items: center;
+  background-color: #0c122c;
+  border-radius: 8px;
+  display: flex;
+  height: 45px;
+  justify-content: center;
+  width: 45px;
+  transition: background-color 0.2s;
+}
+.card-logo__box-icon:hover {
+  cursor: pointer;
+  background-color: #ff4d97;
+}
+
+/* -------------------------------------------------------- */
+/*              Botton section Style - mobile               */
+/*              Right section Style - desktop               */
+/* -------------------------------------------------------- */
+.card-range {
+  background-color: #1d2c67;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 22.5vh;
+  margin-bottom: 5%;
+  padding: 10%;
+}
+@media screen and (min-width: 1440px) {
+  .card-range {
+    height: 6vh;
+    margin-bottom: 0;
+    margin-left: 3%;
+    padding: 3%;
+    position: absolute;
+    left: 580px;
+    top: 452px;
+    width: 30%;
+  }
+}
+.card-range__info {
+  color: #dddbff;
+  text-align: center;
+}
+@media screen and (min-width: 1440px) {
+  .card-range__info {
+    text-align: left;
+  }
+}
+.card-range__info span {
+  font-weight: 700;
+}
+.card-range__memoria-disponivel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card-range__range {
+  color: #dddbff;
+  font-weight: 700;
+}
+
+.card-memoria {
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  height: 14vh;
+  justify-content: center;
+  position: absolute;
+  left: 94px;
+  top: 480px;
+  width: 50%;
+}
+@media screen and (min-width: 1440px) {
+  .card-memoria {
+    height: 8vh;
+    position: absolute;
+    left: 920px;
+    top: 410px;
+    width: 12.5%;
+  }
+}
+.card-memoria__restante-text {
+  color: #848794;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding-left: 5%;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+.card-memoria__restante-num {
+  color: #0c122c;
+  font-size: 40px;
+  font-weight: 700;
+  vertical-align: baseline;
+}
+
+abbr {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------- */
+/*                Slider Style - mobile                */
+/*                Slider Style - desktop               */
+/* --------------------------------------------------- */
+.card-range-slider {
+  align-items: center;
+  background-color: #0c122c;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  height: 20px;
+  margin: 6% 0 5%;
+  opacity: 0.6;
+}
+@media screen and (min-width: 1440px) {
+  .card-range-slider {
+    margin: 3% 0;
+  }
+}
+
+.card-range-slider-bar {
+  background: linear-gradient(155deg, #ffa399 0%, #ff4d97 100%);
+  border-radius: 15px;
+  margin: 5px;
+  width: 75%;
+}
+
+.card-range-slider-ball {
+  background: white;
+  border-radius: 15px;
+  height: 13px;
+  margin-left: auto;
+  margin-right: 2px;
+  margin-top: 1px;
+  width: 13px;
+}
+
+/*# sourceMappingURL=style.css.map */

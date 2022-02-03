@@ -1,31 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Fylo data storage component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<link rel="stylesheet" href="scss/reset.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap">
+	<link rel="stylesheet" href="scss/style.css">
+	<title>Frontend Mentor | Fylo data storage component</title>	
 </head>
+
 <body>
+	<section class="container">
+		<div class="card-logo">
+			<img class="card-logo__logo" src="images/logo.svg" alt="Logotipo">
+			<div class="card-logo__boxes-container">
+				<div class="card-logo__box-icon">
+					<a href="#"><img class="card-logo__icon" src="images/icon-document.svg" alt="Document"></a>
+				</div>
+				<div class="card-logo__box-icon">
+					<a href="#"><img class="card-logo__icon" src="images/icon-folder.svg" alt="Folder"></a>
+				</div>
+				<div class="card-logo__box-icon">
+					<a href="#"><img class="card-logo__icon" src="images/icon-upload.svg" alt="Upload"></a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="card-range">
+			<p class="card-range__info">You’ve used <span>815 <abbr title="Giga Byte">GB</abbr></span> of your storage</p>
 
-  You’ve used 815 GB of your storage
+			<div class="card-range-slider">
+				<div class="card-range-slider-bar">
+					<div class="card-range-slider-ball">
+					</div>
+				</div>
+			</div>
+		
+			<div class="card-range__memoria-disponivel"><!--stats-min-max-->
 
-  185 GB Left
-  
-  0 GB
-  1000 GB
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+				<p class="card-range__range">0 <abbr title="Giga Byte">GB</abbr></p>
+				<p class="card-range__range">1000 <abbr title="Giga Byte">GB</abbr></p>
+			</div>
+		</div>
+		<div class="card-memoria">
+			<p class="card-memoria__restante-num">185</p>
+			<p class="card-memoria__restante-text"><abbr title="Giga Byte">GB</abbr> Left</p>
+		</div>
+	</section>
+	
 </body>
 </html>

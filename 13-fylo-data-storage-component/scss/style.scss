@@ -1,0 +1,231 @@
+//Colors - Neutros:
+$pale-blue: hsl(243, 100%, 93%);
+$grayish-blue: hsl(229, 7%, 55%);
+$dark-blue: hsl(228, 56%, 26%);
+$very-dark-blue: hsl(229, 57%, 11%);
+
+//gradiente:
+$x: #ffa399;
+$y: #ff4d97;
+//background: linear-gradient(155deg, rgba(255,163,153,1) 0%, rgba(255,77,151,1) 100%);
+
+@mixin for-desktop-only {
+    @media screen and (min-width:1440px) {
+        @content;
+    }
+}
+
+body {
+    background-image: url('../images/bg-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    font-size: .875rem; 
+    @include for-desktop-only {
+        align-items: center; //@mixin flex-centralizar
+        background-color: $very-dark-blue;
+        background-image: url('../images/bg-desktop.png');
+        background-position: left 0vw top 50vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex; //@mixin flex-centralizar
+        justify-content: center; //@mixin flex-centralizar
+        min-height: 100vh;
+        min-width: 100vw;  
+    }
+}
+
+.container {
+    height: 100%;
+    margin: 30% auto;
+    width: 90%;
+    @include for-desktop-only {
+        display: flex;
+        flex-direction: row;
+        margin: 10% auto;
+        width: 70%;
+    }
+}
+
+/* -------------------------------------------------------- */
+/*                Top section Style - mobile                */
+/*                Left section Style - desktop              */
+/* -------------------------------------------------------- */
+
+.card-logo {
+    background-color: $dark-blue;
+    border-radius: 12px 100px 12px 12px;
+    display: flex;
+    flex-direction: column;
+    height: 22.5vh;
+    justify-content: space-between;
+    margin-bottom: 5%;
+    padding: 10%;
+
+    @include for-desktop-only {
+        height: 12vh; //@mixin altura-largura
+        margin-bottom: 0;
+        padding: 4%;
+        width: 30%; //@mixin altura-largura
+    }
+
+    &__logo {
+        width: 50%;
+    }
+
+    &__boxes-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 60%;
+        @include for-desktop-only {
+            width: 65%;
+        }
+    }
+
+    &__box-icon {
+        align-items: center; //@mixin flex-centralizar
+        background-color: $very-dark-blue;
+        border-radius: 8px;
+        display: flex; //@mixin flex-centralizar
+        height: 45px; //@mixin altura-largura
+        justify-content: center; //@mixin flex-centralizar
+        width: 45px; //@mixin altura-largura
+        //será feita uma transição da propriedade bg-col em .2seg para a cor apontada no hover(branco
+        transition: background-color .2s;
+        &:hover {
+            cursor: pointer;
+            background-color: $y;
+        }
+    }
+}
+
+/* -------------------------------------------------------- */
+/*              Botton section Style - mobile               */
+/*              Right section Style - desktop               */
+/* -------------------------------------------------------- */
+
+.card-range {
+    background-color: $dark-blue;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 22.5vh;
+    margin-bottom: 5%;
+    padding: 10%;
+
+    @include for-desktop-only {
+        height: 6vh; //@mixin altura-largura
+        margin-bottom: 0;
+        margin-left: 3%;
+        padding: 3%;
+        position: absolute; //@mixin position, top, left
+            left: 580px; //@mixin position, top, left
+            top: 452px; //@mixin position, top, left
+        width: 30%; //@mixin altura-largura
+    }
+
+    &__info {
+        color: $pale-blue;
+        text-align: center;
+        @include for-desktop-only {
+            text-align: left;
+        }
+    }
+
+    &__info span {
+        font-weight: 700;
+    }
+
+    &__memoria-disponivel {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__range {
+        color: $pale-blue;
+        font-weight: 700;
+    }
+}
+
+.card-memoria {
+    align-items: center; //@mixin flex-centralizar
+    background-color: white;
+    border-radius: 8px;
+    display: flex; //@mixin flex-centralizar
+    flex-direction: row;
+    height: 14vh; //@mixin altura-largura
+    justify-content: center; //@mixin flex-centralizar
+    position: absolute; //@mixin position, top, left
+        left: 94px; //@mixin position, top, left
+        top: 480px; //@mixin position, top, left
+    width: 50%; //@mixin altura-largura
+
+    @include for-desktop-only {
+        height: 8vh; //@mixin altura-largura
+        position: absolute; //@mixin position, top, left
+            left: 920px; //@mixin position, top, left
+            top: 410px; //@mixin position, top, left
+        width: 12.5%; //@mixin altura-largura
+    }
+    
+    &__restante-text {
+        color: $grayish-blue;
+        font-size: .75rem; //@mixin fontsize, weight, vert-align
+        font-weight: 700; //@mixin fontsize, weight, vert-align
+        padding-left: 5%;
+        text-transform: uppercase;
+        vertical-align: middle; //@mixin fontsize, weight, vert-align
+    }
+
+    &__restante-num {
+        color: $very-dark-blue;
+        font-size: 40px; //@mixin fontsize, weight, vert-align
+        font-weight: 700; //@mixin fontsize, weight, vert-align
+        vertical-align: baseline; //@mixin fontsize, weight, vert-align
+    }
+}
+
+abbr {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* --------------------------------------------------- */
+/*                Slider Style - mobile                */
+/*                Slider Style - desktop               */
+/* --------------------------------------------------- */
+
+.card-range-slider {
+    align-items: center;
+    background-color: $very-dark-blue;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    height: 20px;
+    margin: 6% 0 5%;
+    opacity: .6;
+    @include for-desktop-only {
+        margin: 3% 0;
+    }
+}
+
+.card-range-slider-bar {
+    background: linear-gradient(155deg, rgba(255,163,153,1) 0%, rgba(255,77,151,1) 100%);
+    border-radius: 15px;
+    margin: 5px;
+    width: 75%;
+}
+
+.card-range-slider-ball {
+    background: white;
+    border-radius: 15px;
+    height: 13px; //@mixin altura-largura
+    margin-left: auto;
+    margin-right: 2px;
+    margin-top: 1px;
+    width: 13px; //@mixin altura-largura
+}
