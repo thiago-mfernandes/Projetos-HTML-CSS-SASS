@@ -1,0 +1,40 @@
+.footer {
+    background-color: $footer-bg;
+    padding: 12.5% 0;
+    @include display-direction(flex, column, center);
+
+    &__logo {
+        margin: 7.5% 0 10%;
+        width: 17.5%;
+    }
+
+    &__nav {
+        margin-bottom: 15%;
+        @include display-direction(flex, column, center);
+    }
+
+    &__link {
+        font-family: 'Bai Jamjuree', sans-serif;
+        padding: 1.5rem;
+        text-decoration: none;
+        @include text-style($dark-grayish-blue, 1.3rem, 400, 1, center);
+        &:hover {
+            cursor: pointer;
+            color: $strong-cyan;
+        }
+    }
+
+    &__social {
+        justify-content: space-between;
+        width: 50%;
+        @include display-direction(flex, row, center);
+    }
+
+    &__social-media img {
+        width: 28px;
+        &:hover {
+            cursor: pointer;
+            filter: invert(59%) sepia(49%) saturate(616%) hue-rotate(121deg) brightness(95%) contrast(88%);
+        }
+    }
+}

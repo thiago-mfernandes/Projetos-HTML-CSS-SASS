@@ -5,70 +5,84 @@ body {
   font-size: 1.125rem;
 }
 
-.header {
-  background-image: url("../images/bg-header-mobile.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 20% 5%;
-  display: flex;
-  flex-direction: column;
-}
-.header__logo {
-  width: 40%;
-  align-self: center;
+.title {
   margin: 5% 0;
-}
-.header__title {
+  width: 80%;
   color: #4c545d;
   font-size: 2rem;
-  margin: 7.5% 0;
   font-weight: 700;
-  text-align: center;
+  line-height: 2.25rem;
+  text-align-last: center;
 }
-
-.title {
-  color: #4c545d;
-  text-align: center;
-  font-size: 1.75rem;
-  margin: 5% 0;
-  line-height: 1.5rem;
-  font-weight: 700;
-  width: 80%;
+@media screen and (min-width: 1440px) {
+  .title {
+    margin: 2% 0;
+    text-align: center;
+    color: #4c545d;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 2.25rem;
+    text-align-last: center;
+  }
 }
 
 .subtitle {
-  color: #4c545d;
-  text-align: center;
-  font-size: 1.5rem;
   margin: 2.5% 0;
-  line-height: 1.5rem;
-  font-weight: 700;
   width: 80%;
+  color: #4c545d;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  text-align-last: center;
 }
 
 .description {
-  color: #9fabb2;
-  text-align: center;
-  font-size: 1rem;
   margin-bottom: 10%;
-  line-height: 1.65rem;
   width: 80%;
+  color: #9fabb2;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.65rem;
+  text-align-last: center;
+}
+@media screen and (min-width: 1440px) {
+  .description {
+    margin-bottom: 2.5%;
+    width: 50%;
+    text-align: center;
+    color: #9fabb2;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.65rem;
+    text-align-last: center;
+  }
 }
 
 .button-ios, .button-mac {
   background-color: #26baa4;
-  border-radius: 30px;
-  height: 10vh;
-  color: white;
-  font-weight: 700;
-  opacity: 0.8;
   border: none;
-  margin: 2.5% 0;
   border-bottom: 3px solid rgba(35, 141, 123, 0.95);
-  font-family: "Bai Jamjuree", sans-serif;
-  font-size: 1rem;
+  border-radius: 30px;
   box-shadow: 0px 5px 25px 10px rgba(38, 186, 164, 0.3);
+  color: white;
+  font-size: 1rem;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 700;
+  height: 10vh;
+  opacity: 0.8;
+  margin: 2.5% 0;
   width: 100%;
+}
+.button-ios:hover, .button-mac:hover {
+  cursor: pointer;
+}
+@media screen and (min-width: 1440px) {
+  .button-ios, .button-mac {
+    font-size: 1.2rem;
+    font-weight: 400;
+    height: 6vh;
+    width: 47.5%;
+  }
 }
 
 .button-mac {
@@ -77,65 +91,277 @@ body {
   box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, 0.3);
 }
 
-.snippets {
-  align-items: center;
+.header {
+  background-image: url("../images/bg-header-mobile.png");
+  padding: 20% 5%;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1440px) {
+  .header {
+    background-image: url("../images/bg-header-desktop.png");
+    padding: 5%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.header__logo {
+  width: 40%;
+  align-self: center;
+  margin: 5% 0;
+}
+@media screen and (min-width: 1440px) {
+  .header__logo {
+    width: 7.5%;
+    margin: 7.5% 0 2.5%;
+  }
+}
+.header__title {
+  margin: 7.5% 0;
+  color: #4c545d;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.25rem;
+  text-align-last: center;
+}
+@media screen and (min-width: 1440px) {
+  .header__title {
+    font-size: 2.5rem;
+    margin: 2.5% 0;
+    width: 55%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header__button-container {
+    justify-content: space-between;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.snippets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .snippets__header {
-  align-items: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+.snippets__header .description {
+  font-size: 1rem;
 }
 .snippets__img {
-  width: 85%;
   align-self: center;
   margin: 15% 0;
+  width: 85%;
+}
+@media screen and (min-width: 1440px) {
+  .snippets__img {
+    width: 50%;
+  }
 }
 .snippets__content {
-  align-items: center;
-  height: 165vh;
+  height: 140vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1440px) {
+  .snippets__content {
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .snippets__content-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .clipboard {
-  align-items: center;
-  height: 95vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .clipboard__img {
   width: 95%;
 }
+@media screen and (min-width: 1440px) {
+  .clipboard__img {
+    width: 70%;
+  }
+}
 
 .workflow {
-  align-items: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
-.workflow__header, .workflow .workflow__itens {
-  align-items: center;
+.workflow__header {
+  margin: 5% 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1440px) {
+  .workflow__item-box {
+    justify-content: center;
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.workflow__item-box .description {
+  width: 85%;
+  font-size: 1rem;
+}
+@media screen and (min-width: 1440px) {
+  .workflow__icon {
+    margin: 7.5% 0;
+  }
+}
+.workflow__itens {
   margin: 5% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1440px) {
+  .workflow__itens {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.workflow__header .title {
+  width: 100%;
+}
+@media screen and (min-width: 1440px) {
+  .workflow__header .description {
+    width: 75%;
+  }
 }
 .workflow__brands {
-  align-items: center;
   margin: 20% 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1440px) {
+  .workflow__brands {
+    justify-content: space-between;
+  }
 }
 .workflow__brands__logo {
-  width: 85%;
   margin: 15% 0;
+  width: 85%;
+}
+@media screen and (min-width: 1440px) {
+  .workflow__brands__logo {
+    margin: 5% 0;
+    width: 15%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .workflow__brands {
+    margin: 5% 0;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .workflow__itens {
+    margin: 2.5% 0;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .clipboard-for {
-  align-items: center;
+  height: 80vh;
   padding: 0 5%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1440px) {
+  .clipboard-for__button-box {
+    justify-content: space-between;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .clipboard-for {
+    height: 40vh;
+  }
+}
+
+.footer {
+  background-color: rgba(76, 84, 93, 0.1);
+  padding: 12.5% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__logo {
+  margin: 7.5% 0 10%;
+  width: 17.5%;
+}
+.footer__nav {
+  margin-bottom: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__link {
+  font-family: "Bai Jamjuree", sans-serif;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: #4c545d;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1;
+  text-align-last: center;
+}
+.footer__link:hover {
+  cursor: pointer;
+  color: #26baa4;
+}
+.footer__social {
+  justify-content: space-between;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.footer__social-media img {
+  width: 28px;
+}
+.footer__social-media img:hover {
+  cursor: pointer;
+  filter: invert(59%) sepia(49%) saturate(616%) hue-rotate(121deg) brightness(95%) contrast(88%);
 }
 
 /*# sourceMappingURL=style.css.map */

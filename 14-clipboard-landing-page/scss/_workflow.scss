@@ -1,0 +1,81 @@
+.workflow {
+    @include display-direction(flex, column, center);
+
+    &__header {
+        margin: 5% 0;
+        @include display-direction(flex, column, center);
+    }
+
+    &__item-box {
+
+        @include for-desktop-only {
+            justify-content: center;
+            width: 33.33%;
+            @include display-direction(flex, column, center);
+        }
+
+        & .description {
+            width: 85%;
+            font-size: 1rem;
+        }
+    }
+
+    &__icon {
+
+        @include for-desktop-only {
+            margin: 7.5% 0;
+        }
+    }
+
+    &__itens {
+        margin: 5% 0;
+        @include display-direction(flex, column, center);
+
+        @include for-desktop-only {
+            @include display-direction(flex, row, center);
+        } 
+    }
+
+    &__header .title {
+        width: 100%;
+    }
+
+    &__header .description {
+        @include for-desktop-only {
+            width: 75%;
+        }
+    }
+
+    &__brands {
+        margin: 20% 0;
+        @include display-direction(flex, column, center);
+
+        @include for-desktop-only {
+            justify-content: space-between;
+        }
+
+        &__logo {
+            margin: 15% 0;
+            width: 85%;
+
+            @include for-desktop-only {
+                margin: 5% 0;
+                width: 15%;
+            }
+        }
+
+        @include for-desktop-only {
+            margin: 5% 0;
+            width: 80%;
+            @include display-direction(flex, row, center);
+        }
+    }
+}
+
+.workflow__itens {
+    @include for-desktop-only {
+        margin: 2.5% 0;
+        width: 80%;
+        @include display-direction(flex, row, center);
+    }     
+}

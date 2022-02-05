@@ -1,0 +1,11 @@
+.clipboard {
+    height: 80vh;
+    @include display-direction(flex, column, center);
+
+    &__img {
+        width: 95%;
+        @include for-desktop-only {
+            width: 70%;
+        }
+    }
+}

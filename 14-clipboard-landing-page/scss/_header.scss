@@ -1,0 +1,41 @@
+.header {
+    background-image: url('../images/bg-header-mobile.png');
+    padding: 20% 5%;
+    @include bg-style(no-repeat, cover);
+    @include display-direction(flex, column, center);
+    
+    @include for-desktop-only {
+        background-image: url('../images/bg-header-desktop.png');
+        padding: 5%;
+        @include bg-style(no-repeat, cover);
+    }
+
+    &__logo {
+        width: 40%;
+        align-self: center;
+        margin: 5% 0;
+        @include for-desktop-only {
+            width: 7.5%;
+            margin: 7.5% 0 2.5%;
+        }
+    }
+
+    &__title {
+        margin: 7.5% 0;
+        @include text-style($dark-grayish-blue, 2rem, 700, 2.25rem, center);
+        
+        @include for-desktop-only {
+            font-size: 2.5rem;
+            margin: 2.5% 0;
+            width: 55%;
+        }
+    }
+
+    &__button-container {
+        @include for-desktop-only {
+            justify-content: space-between;
+            width: 40%;
+            @include display-direction (flex, row, center);
+        }
+    }
+}

@@ -18,8 +18,10 @@
 			copy. Instantly access your clipboard on all your devices.
 		</p>
 
-		<button class="button-ios">Download for iOS</button>
-		<button class="button-mac">Download for Mac</button>
+		<div class="header__button-container">
+			<button class="button-ios">Download for iOS</button>
+			<button class="button-mac">Download for Mac</button>
+		</div>
 	</header>
 	<main>
 
@@ -34,12 +36,14 @@
 			</div>
 			<div class="snippets__content">
 				<img class="snippets__img" src="images/image-computer.png" alt="Computer Screen">
-				<h3 class="subtitle">Quick Search</h3>
-				<p class="description">Easily search your snippets by content, category, web address, application, and more.</p>
-				<h3 class="subtitle">iCloud Sync</h3>
-				<p class="description">Instantly saves and syncs snippets across all your devices.</p>
-				<h3 class="subtitle">Complete History</h3>
-				<p class="description">Retrieve any snippets from the first moment you started using the app.</p>
+				<div class="snippets__content-info">
+					<h3 class="subtitle">Quick Search</h3>
+					<p class="description">Easily search your snippets by content, category, web address, application, and more.</p>
+					<h3 class="subtitle">iCloud Sync</h3>
+					<p class="description">Instantly saves and syncs snippets across all your devices.</p>
+					<h3 class="subtitle">Complete History</h3>
+					<p class="description">Retrieve any snippets from the first moment you started using the app.</p>
+				</div>
 			</div>
 		</section>
 		
@@ -60,17 +64,23 @@
 			</div>
 			
 			<div class="workflow__itens">
-				<img class="wordkflow__icon" src="images/icon-blacklist.svg" alt="List Icon">
-				<h3 class="subtitle">Create blacklists</h3>
-				<p class="description">Ensure sensitive information never makes its way to your clipboard by excluding certain sources.</p>
+				<article class="workflow__item-box">
+					<img class="workflow__icon" src="images/icon-blacklist.svg" alt="List Icon">
+					<h3 class="subtitle">Create blacklists</h3>
+					<p class="description">Ensure sensitive information never makes its way to your clipboard by excluding certain sources.</p>
+				</article>
 				
-				<img class="wordkflow__icon" src="images/icon-text.svg" alt="Icon Text">
-				<h3 class="subtitle">Plain text snippets</h3>
-				<p class="description">Remove unwanted formatting from copied text for a consistent look.</p>
+				<article class="workflow__item-box">
+					<img class="workflow__icon" src="images/icon-text.svg" alt="Icon Text">
+					<h3 class="subtitle">Plain text snippets</h3>
+					<p class="description">Remove unwanted formatting from copied text for a consistent look.</p>
+				</article>
 				
-				<img class="wordkflow__icon" src="images/icon-preview.svg" alt="Icon Preview">
-				<h3 class="subtitle">Sneak preview</h3>
-				<p class="description">Quick preview of all snippets on your Clipboard for easy access.</p>
+				<article class="workflow__item-box">
+					<img class="workflow__icon" src="images/icon-preview.svg" alt="Icon Preview">
+					<h3 class="subtitle">Sneak preview</h3>
+					<p class="description">Quick preview of all snippets on your Clipboard for easy access.</p>
+				</article>
 			</div>
 
 			<div class="workflow__brands">
@@ -89,8 +99,10 @@
 				Available for free on the App Store. Download for Mac or iOS, sync with iCloud
 				and you’re ready to start adding to your clipboard.
 			</p>
-			<button class="button-ios">Download for iOS</button>
-			<button class="button-mac">Download for Mac</button>
+			<div class="clipboard-for__button-box">
+				<button class="button-ios">Download for iOS</button>
+				<button class="button-mac">Download for Mac</button>
+			</div>
 		</div>
 	</main>
 
@@ -105,9 +117,9 @@
 		</div>
 
 		<div class="footer__social">
-			<a class="footer__social-media" href="#"><img src="images/icon-facebook.svg" alt="Facebook Icon"></a>
-			<a class="footer__social-media" href="#"><img src="images/icon-twitter.svg" alt="Twitter Icon"></a>
-			<a class="footer__social-media" href="#"><img src="images/icon-instagram.svg" alt="Instagram Icon"></a>
+			<a class="footer__social-media" href="#"><img class="footer__icon-link svg" src="images/icon-facebook.svg" alt="Facebook Icon"></a>
+			<a class="footer__social-media" href="#"><img class="footer__icon-link svg" src="images/icon-twitter.svg" alt="Twitter Icon"></a>
+			<a class="footer__social-media" href="#"><img class="footer__icon-link svg" src="images/icon-instagram.svg" alt="Instagram Icon"></a>
 		</div>
 	</footer> 
 </body>

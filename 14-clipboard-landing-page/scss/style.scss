@@ -1,17 +1,38 @@
 //Cores
-$strong-cyan: rgb(38, 186, 164);
+$strong-cyan: #26baa4;
 $light-blue: rgb(97, 115, 255);
 $button-mac-shadow: rgba(97, 115, 255, 0.5);
 $button-ios-shadow: rgba(35, 141, 123, 0.95);
 //Neutros
 $dark-grayish-blue: rgb(76, 84, 93);
+$footer-bg: rgba(76, 84, 93, 0.1);
 $grayish-blue: rgb(159, 171, 178);
 
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
 
-@mixin display-direction ($display, $direction) {
+@mixin bg-style($bg-repeat, $bg-size) {
+    background-repeat: $bg-repeat;
+    background-size: $bg-size;
+}
+
+@mixin display-direction ($display, $direction, $align-items) {
     display: $display;
     flex-direction: $direction;
+    align-items: $align-items;
+}
+
+@mixin text-style($color, $font-size, $font-weight, $line-height, $text-align) {
+    color: $color;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    text-align-last: $text-align;
+}
+
+@mixin for-desktop-only {
+    @media screen and (min-width: 1440px) {
+        @content;
+    } 
 }
 
 body {
@@ -20,71 +41,61 @@ body {
     font-size: 1.125rem;
 }
 
-.header {
-    background-image: url('../images/bg-header-mobile.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 20% 5%;
-    @include display-direction(flex, column);
-
-    &__logo {
-        width: 40%;
-        align-self: center;
-        margin: 5% 0;
-    }
-
-    &__title {
-        color: $dark-grayish-blue;
-        font-size: 2rem;
-        margin: 7.5% 0;
-        font-weight: 700;
-        text-align: center;
-    }
-}
-
 .title {
-    color: $dark-grayish-blue;
-    text-align: center;
-    font-size: 1.75rem;
     margin: 5% 0;
-    line-height: 1.5rem;
-    font-weight: 700;
     width: 80%;
+    @include text-style($dark-grayish-blue, 2rem, 700, 2.25rem, center);
+
+    @include for-desktop-only {
+        margin: 2% 0;
+        text-align: center;//????
+        @include text-style($dark-grayish-blue, 2.5rem, 700, 2.25rem, center);
+    }
 }
 
 .subtitle {
-    color: $dark-grayish-blue;
-    text-align: center;
-    font-size: 1.5rem;
     margin: 2.5% 0;
-    line-height: 1.5rem;
-    font-weight: 700;
     width: 80%;
+    @include text-style($dark-grayish-blue, 1.5rem, 700, 1.5rem, center);
 }
 
 .description {
-    color: $grayish-blue;
-    text-align: center;
-    font-size: 1rem;
     margin-bottom: 10%;
-    line-height: 1.65rem;
     width: 80%;
+    @include text-style($grayish-blue, .9rem, 400, 1.65rem, center);
+    
+    @include for-desktop-only {
+        margin-bottom: 2.5%;
+        width: 50%;
+        text-align: center;//??????
+        @include text-style($grayish-blue, 1.10rem, 400, 1.65rem, center);
+    }
 }
 
 .button-ios, .button-mac {
     background-color: $strong-cyan;
-    border-radius: 30px;
-    height: 10vh;
-    color: white;
-    font-weight: 700;
-    opacity: .8;
     border: none;
-    margin: 2.5% 0;
     border-bottom: 3px solid $button-ios-shadow;
-    font-family: 'Bai Jamjuree', sans-serif;
-    font-size: 1rem;
+    border-radius: 30px;
     box-shadow: 0px 5px 25px 10px rgba(38, 186, 164, .3);
+    color: white;
+    font-size: 1rem;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 700;
+    height: 10vh;
+    opacity: .8;
+    margin: 2.5% 0;
     width: 100%;
+    &:hover {
+        cursor: pointer;
+    }
+
+    @include for-desktop-only {
+        font-size: 1.2rem;
+        font-weight: 400;
+        height: 6vh;
+        width: 47.5%;
+    }
 }
 
 .button-mac {
@@ -93,64 +104,4 @@ body {
     box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, .3);
 }
 
-.snippets {
-    align-items: center;
-    @include display-direction(flex, column);
-
-    &__header {
-        align-items: center;
-        @include display-direction(flex, column);
-    }
-
-    &__img {
-        width: 85%;
-        align-self: center;      
-        margin: 15% 0;  
-    }
-
-    &__content {
-        align-items: center;
-        height: 165vh;
-        @include display-direction(flex, column);
-    }
-}
-
-.clipboard {
-    align-items: center;
-    height: 95vh;
-    @include display-direction(flex, column);
-
-    &__img {
-        width: 95%;
-    }
-}
-
-.workflow {
-    align-items: center;
-    @include display-direction(flex, column);
-
-    &__header, .workflow__itens {
-        align-items: center;
-        @include display-direction(flex, column);
-        margin: 5% 0;
-    }
-
-    &__brands {
-        align-items: center;
-        margin: 20% 0;
-        @include display-direction(flex, column);
-
-        &__logo {
-            width: 85%;
-            margin: 15% 0;
-        }
-    }
-}
-
-.clipboard-for {
-    align-items: center;
-    padding: 0 5%;
-    @include display-direction(flex, column);
-}
-
-//mobile, desktop, estados ativos-bototes-rodapelinks
+@import 'header', 'snippets', 'clipboard', 'workflow', 'clipboard-for', 'footer';
