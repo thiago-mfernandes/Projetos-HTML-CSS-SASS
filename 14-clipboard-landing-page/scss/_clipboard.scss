@@ -1,5 +1,6 @@
 .clipboard {
     height: 80vh;
+    padding: 0 5%;
     @include display-direction(flex, column, center);
 
     &__img {

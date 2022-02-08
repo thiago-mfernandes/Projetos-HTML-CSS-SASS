@@ -3,14 +3,39 @@
     padding: 12.5% 0;
     @include display-direction(flex, column, center);
 
+    @include for-desktop-only {
+        justify-content: space-between;
+        max-height: 5%;
+        padding: 1.5% 10%;
+        @include display-direction(flex, row, center);
+    }
+
     &__logo {
         margin: 7.5% 0 10%;
         width: 17.5%;
+        @include for-desktop-only {
+            margin: 0;
+            width: 5%;
+        }
     }
 
     &__nav {
         margin-bottom: 15%;
         @include display-direction(flex, column, center);
+
+        @include for-desktop-only {
+            align-items: flex-start;
+            flex-direction: row;
+            margin-bottom: 0;
+            width: 50%;    
+        }
+    }
+
+    &__nav span {
+        @include display-direction(flex, column, center);
+        @include for-desktop-only {
+            width: 33.33%;
+        }
     }
 
     &__link {
@@ -22,12 +47,23 @@
             cursor: pointer;
             color: $strong-cyan;
         }
+
+        @include for-desktop-only {
+            font-size: 1.1rem;
+            padding: 1rem;
+            text-align: left;
+            width: 100%;
+        }
     }
 
     &__social {
         justify-content: space-between;
         width: 50%;
         @include display-direction(flex, row, center);
+
+        @include for-desktop-only {
+            width: 12%;
+        }
     }
 
     &__social-media img {

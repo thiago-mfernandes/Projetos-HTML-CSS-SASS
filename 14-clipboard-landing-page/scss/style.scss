@@ -26,7 +26,7 @@ $grayish-blue: rgb(159, 171, 178);
     font-size: $font-size;
     font-weight: $font-weight;
     line-height: $line-height;
-    text-align-last: $text-align;
+    text-align: $text-align;
 }
 
 @mixin for-desktop-only {
@@ -48,26 +48,24 @@ body {
 
     @include for-desktop-only {
         margin: 2% 0;
-        text-align: center;//????
         @include text-style($dark-grayish-blue, 2.5rem, 700, 2.25rem, center);
     }
 }
 
 .subtitle {
     margin: 2.5% 0;
-    width: 80%;
+    width: 100%;
     @include text-style($dark-grayish-blue, 1.5rem, 700, 1.5rem, center);
 }
 
 .description {
     margin-bottom: 10%;
-    width: 80%;
+    width: 100%;
     @include text-style($grayish-blue, .9rem, 400, 1.65rem, center);
     
     @include for-desktop-only {
         margin-bottom: 2.5%;
         width: 50%;
-        text-align: center;//??????
         @include text-style($grayish-blue, 1.10rem, 400, 1.65rem, center);
     }
 }

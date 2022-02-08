@@ -11,12 +11,12 @@
     }
 
     &__logo {
-        width: 40%;
         align-self: center;
         margin: 5% 0;
+        width: 40%;
         @include for-desktop-only {
-            width: 7.5%;
             margin: 7.5% 0 2.5%;
+            width: 7.5%;
         }
     }
 
