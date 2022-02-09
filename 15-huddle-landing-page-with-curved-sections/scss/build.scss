@@ -1,0 +1,65 @@
+.build {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../images/mobile-img/bg-section-top-mobile-1.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 100%;
+    padding: 6%;
+
+    &__header {
+        margin: 0 0 10%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    &__title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.25rem;
+        color: $very-dark-cyan;
+        width: 80%;
+        text-align: center;
+        margin: 0 0 10%;
+    }
+
+    .content, .generic--button {
+        margin-bottom: 15%;
+    }
+
+    &__img {
+        width: 90%;
+        margin-bottom: 15%;
+    }
+
+    &__container--info {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin-bottom: 10%;
+    }
+
+    &__container___article {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 50%;
+    }
+
+    &__container___img {
+        width: 18%;
+    }
+
+    &__container___counter {
+        color: $very-dark-cyan;
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 5% 0 7.5%;
+    }
+
+    &__container___info {
+        color: rgba(0, 37, 46, .5);
+        font-size: .75rem;
+    }
+}

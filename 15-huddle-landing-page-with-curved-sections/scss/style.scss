@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+//headings --->  font-family: 'Poppins', sans-serif;
+
+$pink: rgb(255, 82, 191);
+$light-pink: rgb(255, 143, 216);
+$light-red: rgb(255, 66, 66);
+$very-dark-cyan: rgb(0, 37, 46);
+$very-pale-blue: rgb(245, 250, 255);
+$pale-blue: rgb(247, 252, 255);
+$blue-hover-social: rgb(1, 160, 250);
+.content {
+    text-align: center;
+    line-height: 1.25rem;
+    color: $very-dark-cyan;
+}
+
+.generic--button {
+    color: white;
+    border-radius: 24px;
+    background-color: $pink;
+    border: none;
+    height: 2.25rem;
+    width: 60%;
+    font-size: 12px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 37, 46,.2);
+    &:hover {
+        cursor: pointer;
+        background-color: $light-pink;
+    }
+}
+
+@import 'regular', 'brands', 'solid', 'fontawesome';
+@import 'header', 'build', 'benefits', 'footer';

@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5% 0 25%;
+    padding: 6%;
+
+    &__logo {
+        width: 25%;
+    }
+
+    &__button {
+        border-radius: 24px;
+        background: white;
+        border: 1px solid $light-pink;
+        width: 25%;
+        color: $pink;
+        font-size: .75rem;
+        height: 1.6rem;
+        box-shadow: 0px 0px 50px 1px rgba(255, 143, 216, .3);
+        &:hover {
+            cursor: pointer;
+            background-color: $light-pink;
+        }
+    }
+}

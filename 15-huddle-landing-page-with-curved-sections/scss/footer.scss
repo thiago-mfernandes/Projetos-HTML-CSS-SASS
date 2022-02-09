@@ -1,0 +1,123 @@
+.footer {
+    padding: 0 5%;
+    background-color: $very-dark-cyan;
+    display: flex;
+    flex-direction: column-reverse;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+
+        &___logo {
+            filter: invert(100%) sepia(2%) saturate(9%) hue-rotate(352deg) brightness(103%) contrast(105%);
+            margin: 3.5% 0;
+            width: 65%;
+        }
+
+        &___content {
+            color: white;
+            line-height: 1.5rem;
+            font-size: .8rem;
+            margin: 3.5% 0 7.5%;
+            width: 90%;
+        }
+    }
+
+    &__address {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        margin: 1.5% 0;
+
+        &___img {
+            font-size: .5rem;
+            margin-right: 5%;
+        }
+
+        &___content {
+            color: white;
+            font-size: .75rem;
+            margin: 2.5% 0;
+        }
+    }
+
+    &__social-media {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 30%;
+        margin: 10% 0;
+    }
+
+    &__newsletter {
+        display: flex;
+        flex-direction: column;
+        margin: 12.5% 0 20%;
+
+        &___title {
+            color: white;
+            text-transform: uppercase;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        &___content {
+            color: white;
+            line-height: 1.25rem;
+            margin: 7.5% 0;
+            font-family: "Open Sans", sans-serif;
+            font-size: .95rem;
+        }
+    }
+
+    &__container--input {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__input {
+        width: 100%;
+        height: 6vh;
+        border-radius: 4px;
+        border: none;
+        padding-left: 5%;
+        margin: 5% 0;
+        &:hover {
+            cursor: pointer;
+            border: 1px solid $light-red;
+        }
+    }
+    
+    &__button {
+        color: white;
+        border-radius: 4px;
+        background-color: $pink;
+        border: none;
+        height: 2.25rem;
+        width: 45%;
+        font-size: .85rem;
+        &:hover {
+            cursor: pointer;
+            background-color: $light-pink;
+        }
+    }
+
+    &__error {
+        color: $light-red;
+        font-size: .8rem;
+        margin: 2% 0;
+        //visibility: hidden;
+    }
+}
+
+.fa-brands {
+    color: white;
+    font-size: 1.25rem;
+    &:hover {
+        cursor: pointer;
+        color: $blue-hover-social;
+    }
+}
