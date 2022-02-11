@@ -15,24 +15,57 @@ $very-dark-cyan: rgb(0, 37, 46);
 $very-pale-blue: rgb(245, 250, 255);
 $pale-blue: rgb(247, 252, 255);
 $blue-hover-social: rgb(1, 160, 250);
+
+@mixin for-desktop-only {
+    @media screen and (min-width:1440px) {
+        @content;
+    }
+}
+@mixin display-direction-align($display, $direction, $align) {
+    display: $display;
+    flex-direction: $direction;
+    align-items: $align;
+}
+@mixin width-height($width, $height) {
+    width: $width;
+    height: $height;
+}
+@mixin color-fontSize($color, $fontSize) {
+    color: $color;
+    font-size: $fontSize;
+}
+@mixin borderNone-bordeRadius($border, $borderRadius) {
+    border: $border;
+    border-radius: $borderRadius;
+}
+
 .content {
     text-align: center;
     line-height: 1.25rem;
     color: $very-dark-cyan;
+    //---   DESKTOP   ---//
+    @include for-desktop-only {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        width: 48%;
+    }
 }
 
 .generic--button {
-    color: white;
-    border-radius: 24px;
+    @include color-fontSize(white, 12px);
+    @include borderNone-bordeRadius(none, 24px);
+    @include width-height(60%, 2.25rem);
     background-color: $pink;
-    border: none;
-    height: 2.25rem;
-    width: 60%;
-    font-size: 12px;
     box-shadow: 0px 4px 4px 0px rgba(0, 37, 46,.2);
     &:hover {
         cursor: pointer;
         background-color: $light-pink;
+    }
+    //---   DESKTOP   ---//
+    @include for-desktop-only {
+        @include color-fontSize(white, 1.25rem);
+        @include width-height(35%, 4.25rem);
+        @include borderNone-bordeRadius(none, 48px);
     }
 }
 

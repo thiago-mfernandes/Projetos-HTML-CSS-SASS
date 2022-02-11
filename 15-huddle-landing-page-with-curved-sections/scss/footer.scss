@@ -1,123 +1,171 @@
 .footer {
     padding: 0 5%;
     background-color: $very-dark-cyan;
-    display: flex;
-    flex-direction: column-reverse;
+    @include display-direction-align (flex, column-reverse, center);
+    //---   DESKTOP   ---//
+    @include for-desktop-only {
+        @include display-direction-align (flex, row, center);
+    }
 
     &__container {
-        display: flex;
-        flex-direction: column;
+        @include display-direction-align (flex, column, flex-start);
+         //---   DESKTOP   ---//
+        @include for-desktop-only {
+            width: 50%;
+        }
 
         &___logo {
             filter: invert(100%) sepia(2%) saturate(9%) hue-rotate(352deg) brightness(103%) contrast(105%);
             margin: 3.5% 0;
             width: 65%;
+             //---   DESKTOP   ---//
+            @include for-desktop-only {
+                margin: 2.5% 0;
+                width: 50%;
+            }
         }
 
         &___content {
-            color: white;
+            @include color-fontSize(white, .8rem);
             line-height: 1.5rem;
-            font-size: .8rem;
             margin: 3.5% 0 7.5%;
             width: 90%;
+            //---   DESKTOP   ---//
+            @include for-desktop-only {
+                @include color-fontSize(white, 1.25rem);
+                margin: 1.5% 0 2.5%;
+                width: 65%;
+            }
         }
     }
 
     &__address {
-        display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
-        align-items: center;
         width: 100%;
         margin: 1.5% 0;
+        @include display-direction-align (flex, row, center);
 
         &___img {
             font-size: .5rem;
             margin-right: 5%;
+            //---   DESKTOP   ---//
+            @include for-desktop-only {
+                width: 3.5%;
+            }
         }
 
         &___content {
-            color: white;
-            font-size: .75rem;
+            @include color-fontSize(white, .75rem);
             margin: 2.5% 0;
+            //---   DESKTOP   ---//
+            @include for-desktop-only {
+                @include color-fontSize(white, 1rem);
+            }
         }
     }
 
     &__social-media {
-        display: flex;
-        flex-direction: row;
         justify-content: space-between;
         width: 30%;
         margin: 10% 0;
+        @include display-direction-align (flex, row, center);
+        //---   DESKTOP   ---//
+        @include for-desktop-only {
+            width: 25%;
+        }
     }
 
     &__newsletter {
-        display: flex;
-        flex-direction: column;
         margin: 12.5% 0 20%;
+        @include display-direction-align (flex, column, flex-start);
+        //---   DESKTOP   ---//
+        @include for-desktop-only {
+            margin: 3.5% 0 5%;
+            width: 50%;
+            justify-content: space-around;
+        }
 
         &___title {
-            color: white;
+            @include color-fontSize(white, 1.25rem);
             text-transform: uppercase;
-            font-size: 1.25rem;
             font-weight: 600;
+            //---   DESKTOP   ---//
+            @include for-desktop-only {
+                @include color-fontSize(white, 2rem);
+            }
         }
 
         &___content {
-            color: white;
+            @include color-fontSize(white, .95rem);
+            font-family: "Open Sans", sans-serif;
             line-height: 1.25rem;
             margin: 7.5% 0;
-            font-family: "Open Sans", sans-serif;
-            font-size: .95rem;
+            //---   DESKTOP   ---//
+            @include for-desktop-only {
+                @include color-fontSize(white, 1.5rem);
+                line-height: 1.5rem;
+                width: 80%;
+            }
         }
     }
 
     &__container--input {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
+        width: 100%;
+        @include display-direction-align (flex, column, flex-end);
+        //---   DESKTOP   ---//
+        @include for-desktop-only {
+            @include display-direction-align (flex, row, center);
+            justify-content: space-between;
+        }
     }
 
     &__input {
-        width: 100%;
-        height: 6vh;
-        border-radius: 4px;
-        border: none;
+        @include width-height(95%, 6vh);
+        @include borderNone-bordeRadius(none, 4px);
         padding-left: 5%;
         margin: 5% 0;
         &:hover {
             cursor: pointer;
             border: 1px solid $light-red;
         }
+        //---   DESKTOP   ---//
+        @include for-desktop-only {
+            @include width-height(55%, 4vh);
+            margin: 2.5% 0;
+        }
     }
     
     &__button {
-        color: white;
-        border-radius: 4px;
         background-color: $pink;
-        border: none;
-        height: 2.25rem;
-        width: 45%;
-        font-size: .85rem;
+        @include color-fontSize(white, .8rem);
+        @include borderNone-bordeRadius(none, 4px);
+        @include width-height(45%, 2.25rem);
         &:hover {
             cursor: pointer;
             background-color: $light-pink;
         }
+        //---   DESKTOP   ---//
+        @include for-desktop-only {
+            @include width-height(35%, 4vh);
+            @include color-fontSize(white, 1.2rem);
+        }
     }
 
     &__error {
-        color: $light-red;
-        font-size: .8rem;
+        @include color-fontSize($light-red, .8rem);
         margin: 2% 0;
-        //visibility: hidden;
+        visibility: hidden;
     }
 }
 
 .fa-brands {
-    color: white;
-    font-size: 1.25rem;
+    @include color-fontSize(white, 1.25rem);
     &:hover {
         cursor: pointer;
         color: $blue-hover-social;
+    }
+    //---   DESKTOP   ---//
+    @include for-desktop-only {
+        @include color-fontSize(white, 2.25rem);
     }
 }
